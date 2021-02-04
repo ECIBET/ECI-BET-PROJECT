@@ -18,7 +18,11 @@
 ## Modelo Entidad - Relacion
 ![](img/Modelo-E-R.jpg)
 
+# MockUps
+## Log In
+![](img/Log.jpeg)
+## Inicio
+![](img/Inicio.jpeg)
 
 
 
-Modelo-E-R.jpg
