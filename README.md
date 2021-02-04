@@ -1,17 +1,27 @@
-# ECIBET
+# ECIBET :gem:
 ## Informacion General
 - Curso: Arquitectura de Software: 2021 - 1
 - Integrantes: Nikolai Bermudez - Verbo Camacho - Miguel Castellanos
 - Profesor: Sebastian Henao Pinzon
 
-## Roles
+## Roles :bell:
 - Nikolai Bermudez Vega: Scrum Master
 - Verbo Camacho: Developer
 - Miguel Castellanos: Developer
 - Sebastian Henao Pinzon: Product Owner
 
-## Descripción del proyecto
+## Descripción del proyecto :currency_exchange:
+ECIBET es un aplicativo web para una empresa de apuestas enfocadas en el futbol ingles que esta empezando en el mercado y quiere revolucionar la manera en que se generan las apuestas.
 
+### Funcionalidades importantes :white_check_mark:
+- Generar apuestas (Usuario)
+- Ver apuestas en tiempo real (Usuario - Administrador)
+- Estado de cuenta (Usuario - Administrador)
+- Informacion total de las apuestas realizadas (Administrador)
+
+### Manual de Usuario :lock:
+
+## Arquitectura de Diseño
 ## Casos de uso
 ![](img/Casos_de_uso.jpg)
 
@@ -23,6 +33,15 @@
 ![](img/Log.jpeg)
 ## Inicio
 ![](img/Inicio.jpeg)
+
+## Despliegue Heroku :white_check_mark:
+## *Integracion continua en CircleCi* :white_check_mark:
+## Reporte de analisis *Codacy* :white_check_mark:
+## Descripcion de la Metodologia :unlock:
+### Sprint 1 :100:
+### Sprint 2 :100:
+### Sprint 3 :100:
+
 
 
 
