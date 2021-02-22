@@ -48,11 +48,16 @@ ECIBET es un aplicativo web para una empresa de apuestas enfocadas en el futbol 
 
 ![](img/puntos.jpg)
 ### Sprint 1 :100:
-![](img/sprint-1.jpg)
+![](img/sprint1.jpg)
 ### Sprint 2 :100:
 ![](img/sprint-2.jpg)
 ### Sprint 3 :100:
 ![](img/sprint-3.jpg)
+
+## Construido
+[IntelliJ IDEA](https://www.jetbrains.com/es-es/idea/) Editor de JAVA donde se puede compilar el proyecto.
+
+[Spring](https://spring.io) Framework Spark
 
 
 
