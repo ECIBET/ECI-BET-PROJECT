@@ -1,8 +1,5 @@
 # ECIBET :gem:
 
-## Descripción del proyecto :currency_exchange:
-ECIBET es un aplicativo web para una empresa de apuestas enfocadas en el futbol ingles con una actualizacion constante de la cuota, con ganas de revolucionar la manera en que se generan las apuestas. Brindando seguridad y confianza a cada uno de nuestros clientes a la hora de que ellos realicen alguna apuesta. 
-
 ## Informacion General
 - Curso: Arquitectura de Software: 2021 - 1
 - Integrantes: Nikolai Bermudez - Verbo Camacho - Miguel Castellanos
@@ -14,6 +11,8 @@ ECIBET es un aplicativo web para una empresa de apuestas enfocadas en el futbol 
 - Miguel Castellanos: Developer
 - Sebastian Henao Pinzon: Product Owner
 
+## Descripción del proyecto :currency_exchange:
+ECIBET es un aplicativo web para una empresa de apuestas enfocadas en el futbol ingles con una actualizacion constante de la cuota, con ganas de revolucionar la manera en que se generan las apuestas. Brindando seguridad y confianza a cada uno de nuestros clientes a la hora de que ellos realicen alguna apuesta. 
 
 ### Funcionalidades importantes :white_check_mark:
 - Generar apuestas (Usuario)
