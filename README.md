@@ -37,6 +37,7 @@ ECIBET es un aplicativo web para una empresa de apuestas enfocadas en el futbol 
 ![](img/Inicio.jpeg)
 
 ## Despliegue Heroku :white_check_mark:
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/806dd65600ad4e309fa474d52d401617)](https://app.codacy.com/gh/ECIBET/ECI-BET-PROJECT?utm_source=github.com&utm_medium=referral&utm_content=ECIBET/ECI-BET-PROJECT&utm_campaign=Badge_Grade_Settings)
 [![Heroku](img/heroku.png)](http://ecibets.herokuapp.com)
 
 ## *Integracion continua en CircleCi* :white_check_mark:
