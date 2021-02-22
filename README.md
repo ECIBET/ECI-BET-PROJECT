@@ -1,8 +1,5 @@
 # ECIBET :gem:
 
-## Descripción del proyecto :currency_exchange:
-ECIBET es un aplicativo web para una empresa de apuestas enfocadas en el futbol ingles con una actualizacion constante de la cuota, empezando en el mercado y con ganas de revolucionar la manera en que se generan las apuestas.
-
 ## Informacion General
 - Curso: Arquitectura de Software: 2021 - 1
 - Integrantes: Nikolai Bermudez - Verbo Camacho - Miguel Castellanos
@@ -14,6 +11,8 @@ ECIBET es un aplicativo web para una empresa de apuestas enfocadas en el futbol 
 - Miguel Castellanos: Developer
 - Sebastian Henao Pinzon: Product Owner
 
+## Descripción del proyecto :currency_exchange:
+ECIBET es un aplicativo web para una empresa de apuestas enfocadas en el futbol ingles con una actualizacion constante de la cuota, con ganas de revolucionar la manera en que se generan las apuestas. Brindando seguridad y confianza a cada uno de nuestros clientes a la hora de que ellos realicen alguna apuesta. 
 
 ### Funcionalidades importantes :white_check_mark:
 - Generar apuestas (Usuario)
@@ -36,15 +35,31 @@ ECIBET es un aplicativo web para una empresa de apuestas enfocadas en el futbol 
 ## Inicio
 ![](img/Inicio.jpeg)
 
+## Comandos
+Para compilar y correr las pruebas: ```mvn package```
+
+Para ejecutar y utilizar el programa: ```mvn exec:java -Dexec.mainClass="com.example.Main```
+
+Para ejecutar las pruebas: ```mvn test```
+
+Para generar javadoc con maven: ```mvn javadoc:javadoc```
+
+Para generar javadoc de las pruebas: ```mvn javadoc:test-javadoc```
+
+**IMPORTANTE:** Para poder utilizar el aplicativo es necesario compilar primero el proyecto con **mvn package**.
+
 ## Despliegue Heroku :white_check_mark:
 [![Heroku](img/heroku.png)](http://ecibets.herokuapp.com)
 
 ## *Integracion continua en CircleCi* :white_check_mark:
+[![ECIBET](https://circleci.com/gh/ECIBET/ECI-BET-PROJECT.svg?style=svg)](https://app.circleci.com/pipelines/github/ECIBET/ECI-BET-PROJECT)
+
 ## Reporte de analisis *Codacy* :white_check_mark:
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9c5a8e845ac94857ab11ec72cb0afd78)](https://www.codacy.com/gh/ECIBET/ECI-BET-PROJECT/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ECIBET/ECI-BET-PROJECT&amp;utm_campaign=Badge_Grade)
 
 ## Descripcion de la Metodologia :unlock:
 - Con esta guia hemos diseñado el plan de ejecucion del proyecto
+- Taiga : https://tree.taiga.io/project/verbocamacho-ecibeteci-bet-project/timeline
 
 ![](img/puntos.jpg)
 ### Sprint 1 :100:
