@@ -41,11 +41,17 @@ ECIBET es un aplicativo web para una empresa de apuestas enfocadas en el futbol 
 
 ## *Integracion continua en CircleCi* :white_check_mark:
 ## Reporte de analisis *Codacy* :white_check_mark:
-## Descripcion de la Metodologia :unlock:
-### Sprint 1 :100: Taiga [aqui](https://tree.taiga.io/project/verbocamacho-ecibeteci-bet-project/timeline)
-### Sprint 2 :100:
-### Sprint 3 :100:
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/9c5a8e845ac94857ab11ec72cb0afd78)](https://www.codacy.com/gh/ECIBET/ECI-BET-PROJECT/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ECIBET/ECI-BET-PROJECT&amp;utm_campaign=Badge_Grade)
 
+## Descripcion de la Metodologia :unlock:
+- Con esta guia hemos diseñado el plan de ejecucion del proyecto
+![](img/puntos.jpg)
+### Sprint 1 :100:
+![](img/sprint-1.jpg)
+### Sprint 2 :100:
+![](img/sprint-2.jpg)
+### Sprint 3 :100:
+![](img/sprint-3.jpg)
 
 
 
