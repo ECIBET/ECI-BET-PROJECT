@@ -52,6 +52,8 @@ Para generar javadoc de las pruebas: ```mvn javadoc:test-javadoc```
 [![Heroku](img/heroku.png)](http://ecibets.herokuapp.com)
 
 ## *Integracion continua en CircleCi* :white_check_mark:
+[![ECIBET](https://circleci.com/gh/ECIBET/ECI-BET-PROJECT.svg?style=svg)](https://app.circleci.com/pipelines/github/ECIBET/ECI-BET-PROJECT)
+
 ## Reporte de analisis *Codacy* :white_check_mark:
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9c5a8e845ac94857ab11ec72cb0afd78)](https://www.codacy.com/gh/ECIBET/ECI-BET-PROJECT/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ECIBET/ECI-BET-PROJECT&amp;utm_campaign=Badge_Grade)
 
