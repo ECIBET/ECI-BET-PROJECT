@@ -36,6 +36,19 @@ ECIBET es un aplicativo web para una empresa de apuestas enfocadas en el futbol 
 ## Inicio
 ![](img/Inicio.jpeg)
 
+## Comandos
+Para compilar y correr las pruebas: ```mvn package```
+
+Para ejecutar y utilizar el programa: ```mvn exec:java -Dexec.mainClass="com.example.Main```
+
+Para ejecutar las pruebas: ```mvn test```
+
+Para generar javadoc con maven: ```mvn javadoc:javadoc```
+
+Para generar javadoc de las pruebas: ```mvn javadoc:test-javadoc```
+
+**IMPORTANTE:** Para poder utilizar el aplicativo es necesario compilar primero el proyecto con **mvn package**.
+
 ## Despliegue Heroku :white_check_mark:
 [![Heroku](img/heroku.png)](http://ecibets.herokuapp.com)
 
