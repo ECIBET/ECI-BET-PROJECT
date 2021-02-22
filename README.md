@@ -58,6 +58,7 @@ Para generar javadoc de las pruebas: ```mvn javadoc:test-javadoc```
 
 ## Descripcion de la Metodologia :unlock:
 - Con esta guia hemos diseñado el plan de ejecucion del proyecto
+- Taiga : https://tree.taiga.io/project/verbocamacho-ecibeteci-bet-project/timeline
 
 ![](img/puntos.jpg)
 ### Sprint 1 :100:
