@@ -32,6 +32,9 @@ ECIBET es un aplicativo web para una empresa de apuestas enfocadas en el futbol 
 ## Modelo Componentes 
 ![](img/component.png)
 
+## Diagrama de Clases
+![](img/Clases.png)
+
 # MockUps
 ## Log In
 ![](img/Log.jpeg)
