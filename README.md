@@ -35,6 +35,9 @@ ECIBET es un aplicativo web para una empresa de apuestas enfocadas en el futbol 
 ## Diagrama de Clases
 ![](img/clases.png)
 
+## Diagrama de BD
+![](img/DB.jpg)
+
 # MockUps
 ## Log In
 ![](img/Log.jpeg)
@@ -44,7 +47,7 @@ ECIBET es un aplicativo web para una empresa de apuestas enfocadas en el futbol 
 ## Comandos
 Para compilar y correr las pruebas: ```mvn package```
 
-Para ejecutar y utilizar el programa: ```mvn exec:java -Dexec.mainClass="com.example.Main```
+Para ejecutar y utilizar el programa: ```mvn exec:java -Dexec.mainClass="Main```
 
 Para ejecutar las pruebas: ```mvn test```
 

@@ -6,7 +6,7 @@ CREATE TABLE usuarios (
    fechaNacimiento date not null,
    CONSTRAINT usuarios_pk PRIMARY KEY (idUsuario)
 );
-
+insert into usuarios values ((select count(*)+1 from usuarios),10000,'prueba@mail.com','CC',NOW());
 
 CREATE TABLE apuestas (
    idApuesta int  NOT NULL,
@@ -107,3 +107,4 @@ alter table partidos add constraint partidos_datos
 
 alter table apuestas drop constraint apuestas_administradores;
 
+select * from apuestas;
