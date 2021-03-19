@@ -21,13 +21,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 		.antMatchers("/webjars/**").permitAll()
 		.antMatchers("/stompendpoint/**").permitAll()
 		.antMatchers("/").permitAll()
-		.antMatchers("/edit-profile-basic.html").permitAll()
-		.antMatchers("/edit-profile-password.html").permitAll()
-		.antMatchers("/edit-profile-work-edu.html").permitAll()
-		.antMatchers("/timeline.html").permitAll()
-		.antMatchers("/newsfeed-messages.html").permitAll()
-		.antMatchers("/timeline-friends.html").permitAll()
-		.antMatchers("/timeline-about.html").permitAll()
+		.antMatchers("/assets/**").permitAll()
+		.antMatchers("/static/**").permitAll()
 		.antMatchers(HttpMethod.POST, "/usuarios").permitAll()
 		.anyRequest().authenticated();
 	}
