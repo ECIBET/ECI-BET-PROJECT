@@ -61,7 +61,10 @@ Para generar javadoc de las pruebas: ```mvn javadoc:test-javadoc```
 **IMPORTANTE:** Para poder utilizar el aplicativo es necesario compilar primero el proyecto con **mvn package**.
 
 ## Despliegue Heroku :white_check_mark:
-[![Heroku](img/heroku.png)](http://ecibets.herokuapp.com)
+[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](http://ecibets.herokuapp.com)
+
+
+
 
 ## *Integracion continua en CircleCi* :white_check_mark:
 [![ECIBET](https://circleci.com/gh/ECIBET/ECI-BET-PROJECT.svg?style=svg)](https://app.circleci.com/pipelines/github/ECIBET/ECI-BET-PROJECT)
