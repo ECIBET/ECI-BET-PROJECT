@@ -3,7 +3,7 @@ var apiclient = (function () {
     return {
         obtenerTocken(correo,password,callback){
         var promise = $.ajax({
-          "url": "http://localhost:5000/oauth/token",
+          "url": "/oauth/token",
           "method": "POST",
           "timeout": 0,
           "headers": {

@@ -25,10 +25,10 @@ public class Main implements CommandLineRunner {
 //    String pass = "1234";
 //    String paswordBcrypt = passworEncoder.encode(pass);
 //    System.out.println(paswordBcrypt);
-    HttpResponse<String> response = Unirest.get("https://heisenbug-premier-league-live-scores-v1.p.rapidapi.com/api/premierleague/table")
-            .header("x-rapidapi-key", "38f0cc4356mshe26864a1c61d601p1a39c0jsnc42c98d2c250")
-            .header("x-rapidapi-host", "heisenbug-premier-league-live-scores-v1.p.rapidapi.com")
-            .asString();
-    System.out.println(response.getBody());
+//    HttpResponse<String> response = Unirest.get("https://heisenbug-premier-league-live-scores-v1.p.rapidapi.com/api/premierleague/table")
+//            .header("x-rapidapi-key", "5716617fcemsh2b5d60c75f24ac7p1cc288jsn40e05c1da0bd")
+//            .header("x-rapidapi-host", "heisenbug-premier-league-live-scores-v1.p.rapidapi.com")
+//            .asString();
+//    System.out.println(response.getBody());
   }
 }
