@@ -26,9 +26,6 @@ public class Usuario implements Serializable {
     private String fechaNacimiento;
     @Column(updatable = true)
     private boolean enabled;
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "FK_APUESTAS")
-    private List<Apuesta> apuestas = new CopyOnWriteArrayList<>();
 
     public Usuario() {
 
@@ -44,6 +41,7 @@ public class Usuario implements Serializable {
         this.fechaNacimiento = fechaNacimiento;
         this.enabled = enabled;
     }
+
 
     public String getUsername() {
         return username;
@@ -65,18 +63,9 @@ public class Usuario implements Serializable {
         this.enabled = enabled;
     }
 
-    public List<Apuesta> getApuestas() {
-        return apuestas;
-    }
-
-    public void setApuestas(List<Apuesta> apuestas) {
-        this.apuestas = apuestas;
-    }
-
     public void setPassword(String password) {
         this.password = password;
     }
-
 
     public int getId() {
         return id;

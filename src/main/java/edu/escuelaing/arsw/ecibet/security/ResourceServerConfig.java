@@ -31,10 +31,13 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 				.antMatchers("/about.html").permitAll()
 				.antMatchers("/register.html").permitAll()
 				.antMatchers("/index.html").permitAll()
+
+				.antMatchers("/indexLogin.html").permitAll()
 		.antMatchers("/assets/**").permitAll()
 		.antMatchers("/static/**").permitAll()
 		.antMatchers(HttpMethod.POST, "/usuarios").permitAll()
 		.anyRequest().authenticated();
 	}
+
 	
 }

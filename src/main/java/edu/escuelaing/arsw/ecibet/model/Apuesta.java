@@ -13,15 +13,7 @@ public class Apuesta implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "FK_USUARIOS")
-    private List<Usuario> usuario = new CopyOnWriteArrayList<>();
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "FK_ADMINISTRADORES")
-    private List<Administrador> administradores = new CopyOnWriteArrayList<>();
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "FK_PARTIDOS")
-    private List<Partido> partidos = new CopyOnWriteArrayList<>();
+
     @Column(updatable = false)
     private Date fecha;
     @Column(updatable = true)
@@ -33,8 +25,17 @@ public class Apuesta implements Serializable {
     private int valorApostado;
     @Column(updatable = true)
     private boolean estado;
+    @Column(updatable = false)
+    private int equipoLocal;
 
-    public Apuesta(int id, Date fecha, int marcadorA, int marcadorB, int ganancia, int valorApostado, boolean estado) {
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Administrador> administradores = new CopyOnWriteArrayList<>();
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Partido> partidos = new CopyOnWriteArrayList<>();
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Usuario> usuarios = new CopyOnWriteArrayList<>();
+
+    public Apuesta(int id, Date fecha, int marcadorA, int marcadorB, int ganancia, int valorApostado, boolean estado, int equipoLocal) {
         this.id = id;
         this.fecha = fecha;
         this.marcadorA = marcadorA;
@@ -42,6 +43,7 @@ public class Apuesta implements Serializable {
         this.ganancia = ganancia;
         this.valorApostado = valorApostado;
         this.estado = estado;
+        this.equipoLocal = equipoLocal;
     }
 
     public int getId() {
@@ -52,12 +54,28 @@ public class Apuesta implements Serializable {
         this.id = id;
     }
 
-    public List<Usuario> getUsuario() {
-        return usuario;
+    public int getEquipoLocal() {
+        return equipoLocal;
     }
 
-    public void setUsuario(List<Usuario> usuario) {
-        this.usuario = usuario;
+    public void setEquipoLocal(int equipoLocal) {
+        this.equipoLocal = equipoLocal;
+    }
+
+    public List<Administrador> getAdministradores() {
+        return administradores;
+    }
+
+    public void setAdministradores(List<Administrador> administradores) {
+        this.administradores = administradores;
+    }
+
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(List<Usuario> usuarios) {
+        this.usuarios = usuarios;
     }
 
     public List<Administrador> getApuestas() {

@@ -28,7 +28,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	}
 	@Override
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-		clients.inMemory().withClient("SocialAcademyWeb")
+		clients.inMemory().withClient("EciBet")
 		.secret(passwordEncoder.encode("Hola1234"))
 		.scopes("read","write")
 		.authorizedGrantTypes("password", "refresh_token")

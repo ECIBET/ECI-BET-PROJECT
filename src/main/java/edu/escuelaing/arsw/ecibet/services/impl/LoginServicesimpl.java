@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,6 +28,10 @@ public class LoginServicesimpl  implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
         Usuario usuario = usuarioDao.findByCorreo(username);
+        System.out.println(username);
+        System.out.println(usuario.getCorreo());
+        System.out.println(usuario.getPassword());
+
         if (usuario == null) {
             System.out.println("error en el Login: el usuario no existe");
             throw new UsernameNotFoundException("error en el Login: el usuario no existe"+username);

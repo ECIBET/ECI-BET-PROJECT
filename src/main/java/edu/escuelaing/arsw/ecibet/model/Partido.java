@@ -24,13 +24,10 @@ public class Partido implements Serializable {
     private String nombreDeporte;
     private String tipoEncuentro;
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "FK_EQUIPOS")
     private List<Equipo> equipos = new CopyOnWriteArrayList<>();
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "FK_DEPORTES")
     private List<Deporte> deportes = new CopyOnWriteArrayList<>();
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "FK_DATOS")
     private List<Dato> datos = new CopyOnWriteArrayList<>();
 
     public Partido(int id, int marcadorA, int marcadorB, Date fecha, boolean estado, String nombreDeporte, String tipoEncuentro) {
