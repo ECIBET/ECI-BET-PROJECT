@@ -11,6 +11,8 @@ login = (function () {
     function cerrarSesion(){
         localStorage.clear();
         location.reload();
+        location.href = "/";
+
 
     }
     function isLogin(token){
