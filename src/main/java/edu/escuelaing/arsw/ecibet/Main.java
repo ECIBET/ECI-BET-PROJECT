@@ -30,5 +30,10 @@ public class Main implements CommandLineRunner {
 //            .header("x-rapidapi-host", "heisenbug-premier-league-live-scores-v1.p.rapidapi.com")
 //            .asString();
 //    System.out.println(response.getBody());
+//    HttpResponse<String> response = Unirest.get("https://heisenbug-premier-league-live-scores-v1.p.rapidapi.com/api/premierleague/odds?team1=Chelsea&team2=West%20Brom&bookmaker=Bet365&odd=1x2-FT")
+//            .header("x-rapidapi-key", "5716617fcemsh2b5d60c75f24ac7p1cc288jsn40e05c1da0bd")
+//            .header("x-rapidapi-host", "heisenbug-premier-league-live-scores-v1.p.rapidapi.com")
+//            .asString();
+//    System.out.println(response.getBody());
   }
 }
