@@ -23,12 +23,7 @@ public class Partido implements Serializable {
     private boolean estado;
     private String nombreDeporte;
     private String tipoEncuentro;
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Equipo> equipos = new CopyOnWriteArrayList<>();
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Deporte> deportes = new CopyOnWriteArrayList<>();
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Dato> datos = new CopyOnWriteArrayList<>();
+
 
     public Partido(int id, int marcadorA, int marcadorB, Date fecha, boolean estado, String nombreDeporte, String tipoEncuentro) {
         this.id = id;
@@ -96,27 +91,4 @@ public class Partido implements Serializable {
         this.tipoEncuentro = tipoEncuentro;
     }
 
-    public List<Equipo> getEquipos() {
-        return equipos;
-    }
-
-    public void setEquipos(List<Equipo> equipos) {
-        this.equipos = equipos;
-    }
-
-    public List<Deporte> getDeportes() {
-        return deportes;
-    }
-
-    public void setDeportes(List<Deporte> deportes) {
-        this.deportes = deportes;
-    }
-
-    public List<Dato> getDatos() {
-        return datos;
-    }
-
-    public void setDatos(List<Dato> datos) {
-        this.datos = datos;
-    }
 }

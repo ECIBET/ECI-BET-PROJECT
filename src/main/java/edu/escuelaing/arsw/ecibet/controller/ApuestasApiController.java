@@ -17,7 +17,7 @@ public class ApuestasApiController {
     @Qualifier("apuestasServiceImpl")
     ApuestasService apuesServi;
 
-    @RequestMapping(method = RequestMethod.GET, value = "/premiereleague")
+    @RequestMapping(method = RequestMethod.GET, value = "/premierleague")
     public ResponseEntity<?> getTablePremiere() {
         return new ResponseEntity<>(apuesServi.getTablePremierLeague(), HttpStatus.ACCEPTED);
     }
