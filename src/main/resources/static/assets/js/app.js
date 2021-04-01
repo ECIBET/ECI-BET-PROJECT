@@ -12,7 +12,11 @@ var app = (function () {
                 location.href = "/";
                 return
             }
-        }
+    }
+    function table(){
+
+
+    }
 
     return {
         getToken: getToken,
