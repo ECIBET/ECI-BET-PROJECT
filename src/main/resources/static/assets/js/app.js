@@ -13,7 +13,13 @@ var app = (function () {
                 return
             }
     }
-    function table(){
+    function createTable(){
+        if (localStorage.getItem("Authorization") !== null) {
+            apiclient.obtenerApuestas();
+
+             return
+        }
+
 
 
     }

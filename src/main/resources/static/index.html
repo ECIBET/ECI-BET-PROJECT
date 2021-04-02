@@ -179,7 +179,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h3>Football Games</h3>
-                            <span>Live Play</span><input type="checkbox" id="switch" /><label for="switch">Toggle</label>
+                            <span>Dark Mode</span><input type="checkbox" data-toggle="modal" data-target="#myModal2" id="switch" /><label for="switch">Toggle</label>
                         </div>
                         <div class="card-body">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -556,7 +556,24 @@
         </div>
     </div>
 
+    <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog ">
 
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Dark Mode</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h5>Funcion en proceso</h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success"  data-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog ">
@@ -568,19 +585,19 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <form oninput="x.value=parseInt(plata.value)*cuota.value">
+                    <form oninput="x.value=plata.value*cuota.value">
                         Cuota:
-                        <input type="number" id="cuota" value="2.40" disabled>
+                        <input type="number" id="cuota" value="2.40" readonly>
                         <br>
                         Valor Apostar:
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">$</span>
                             </div>
-                            <input type="number" class="form-control" id="plata" step="100" min="500" value="500" >
+                            <input type="number" class="form-control" id="plata" step="100" min="500" placeholder="Apuesta Minima $500" >
                          </div>
                         Pago:
-                        <output name="x" for="a b"></output>
+                        <output name="x" for="cuota plata"></output>
                     </form>
                 </div>
                 <div class="modal-footer">

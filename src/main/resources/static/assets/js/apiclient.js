@@ -28,6 +28,29 @@ var apiclient = (function () {
                         console.info("Credenciales incorrectas");
 
                     });
+        },
+        obtenerApuestas(callback,token){
+                var promise = $.ajax({
+                  "url": "/tables/bets",
+                  "method": "GET",
+                  "timeout": 0,
+                  "headers": {
+                    "Authorization": "Bearer "+token
+                  },
+                  "Content-Type": "application/json"
+                });
+                promise.then(function (data) {
+                                console.log("Llego al OK")
+                                console.info("OK");
+                                callback(data);
+                            }, function (data) {
+                                console.log("No llego al OK")
+                                console.info(data)
+                                console.info("No hay informacion");
+
+                            });
         }
+
     }
+
 })();
