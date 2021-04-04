@@ -20,8 +20,6 @@ public class EciBetApiController {
     @Qualifier("eciBetServiceImpl")
     EciBetService eciBetSer;
 
-
-
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")
     public ResponseEntity<?> obtenerUsuario(@PathVariable int id) {
         return new ResponseEntity<>(eciBetSer.findUsuarioById(id), HttpStatus.ACCEPTED);

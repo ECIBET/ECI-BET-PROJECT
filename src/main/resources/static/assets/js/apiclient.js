@@ -18,39 +18,58 @@ var apiclient = (function () {
           contentType: "application/x-www-form-urlencoded"
         });
         promise.then(function (data) {
-                        console.log("Llego al OK")
+                        //console.log("Llego al OK")
                         console.info("OK");
                         localStorage.setItem("correo", correo);
                         callback(data);
                     }, function (data) {
-                        console.log("No llego al OK")
+                        //console.log("No llego al OK")
                         console.info(data)
                         console.info("Credenciales incorrectas");
 
                     });
         },
         obtenerApuestas(callback,token){
-                var promise = $.ajax({
-                  "url": "/tables/bets",
-                  "method": "GET",
-                  "timeout": 0,
-                  "headers": {
-                    "Authorization": "Bearer "+token
-                  },
-                  "Content-Type": "application/json"
-                });
-                promise.then(function (data) {
-                                console.log("Llego al OK")
-                                console.info("OK");
-                                callback(data);
-                            }, function (data) {
-                                console.log("No llego al OK")
-                                console.info(data)
-                                console.info("No hay informacion");
-
-                            });
+           jQuery.ajax({
+             url: "/tables/bets",
+             type: 'GET',
+             contentType: "application/json",
+             success: function (result) {
+                 callback(result);
+             },
+              async: true
+           });
+        },
+        obtenerUsuarioCorreo(correo, token, callback){
+                    //console.log(token);
+                    var promise = $.ajax({
+                        url: "/usuarios/correos/"+correo,
+                        type: 'GET',
+                        headers: {"Authorization" : "Bearer "+token},
+                        contentType: "application/json"
+                    });
+                    promise.then(function (data) {
+                        console.info("OK");
+                        //console.log(data)
+                        callback(data);
+                    }, function (data) {
+                        console.info(data)
+                        console.info("Credenciales incorrectas");
+                    });
+        },
+        guardarApuestas(token,id,apuesta){
+            var promise = $.ajax({
+                     url: "/tables/"+id+"/apuestas",
+                     type: 'POST',
+                     timeout : 0,
+                     headers: {"Authorization" : "Bearer "+token, "Content-Type": "application/json"},
+                     data: apuesta,
+                    });
+                    promise.then(function () {
+                        console.info("OK");
+                    }, function () {
+                        console.info("ERROR");
+                    });
         }
-
     }
-
 })();

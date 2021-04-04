@@ -5,4 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface EciBetUsuarioPersistence extends CrudRepository<Usuario, Integer>  {
     public Usuario findByCorreo(String correo);
+
 }

@@ -22,5 +22,16 @@ public class ApuestasApiController {
         return new ResponseEntity<>(apuesServi.getTablePremierLeague(), HttpStatus.ACCEPTED);
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/bets")
+    public ResponseEntity<?> getTableBets() {
+        return new ResponseEntity<>(apuesServi.getTableBets(), HttpStatus.ACCEPTED);
+    }
+
+//    @RequestMapping(method = RequestMethod.POST, value = "/{id}/apuestas")
+//    public ResponseEntity<?> guardarApuesta(@RequestBody String apuesta, @PathVariable int id) {
+//        apuesServi.guardarApuesta(apuesta,id);
+//        return new ResponseEntity<>(HttpStatus.ACCEPTED);
+//    }
+
 
 }

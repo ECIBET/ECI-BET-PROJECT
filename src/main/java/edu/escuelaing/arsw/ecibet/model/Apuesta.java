@@ -13,15 +13,10 @@ public class Apuesta implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
-
     @Column(updatable = false)
     private Date fecha;
     @Column(updatable = true)
-    private int marcadorA;
-    @Column(updatable = true)
-    private int marcadorB;
-    @Column(updatable = true)
-    private int ganancia;
+    private int cuota;
     private int valorApostado;
     @Column(updatable = true)
     private boolean estado;
@@ -33,12 +28,13 @@ public class Apuesta implements Serializable {
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Usuario> usuarios = new CopyOnWriteArrayList<>();
 
+    public Apuesta(){
+
+    }
     public Apuesta(int id, Date fecha, int marcadorA, int marcadorB, int ganancia, int valorApostado, boolean estado) {
         this.id = id;
         this.fecha = fecha;
-        this.marcadorA = marcadorA;
-        this.marcadorB = marcadorB;
-        this.ganancia = ganancia;
+        this.cuota = ganancia;
         this.valorApostado = valorApostado;
         this.estado = estado;
     }
@@ -91,28 +87,13 @@ public class Apuesta implements Serializable {
         this.fecha = fecha;
     }
 
-    public int getMarcadorA() {
-        return marcadorA;
+
+    public int getCuota() {
+        return cuota;
     }
 
-    public void setMarcadorA(int marcadorA) {
-        this.marcadorA = marcadorA;
-    }
-
-    public int getMarcadorB() {
-        return marcadorB;
-    }
-
-    public void setMarcadorB(int marcadorB) {
-        this.marcadorB = marcadorB;
-    }
-
-    public int getGanancia() {
-        return ganancia;
-    }
-
-    public void setGanancia(int ganancia) {
-        this.ganancia = ganancia;
+    public void setCuota(int cuota) {
+        this.cuota = cuota;
     }
 
     public int getValorApostado() {
