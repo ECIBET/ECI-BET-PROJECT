@@ -58,16 +58,25 @@ var apiclient = (function () {
                     });
         },
         guardarApuestas(token,id,apuesta){
+        //var pr=JSON.stringify(apuesta)
+
+            //console.log(apuesta);
             var promise = $.ajax({
-                     url: "/tables/"+id+"/apuestas",
-                     type: 'POST',
-                     timeout : 0,
-                     headers: {"Authorization" : "Bearer "+token, "Content-Type": "application/json"},
-                     data: apuesta,
-                    });
-                    promise.then(function () {
+                      "url": "/tables/"+id+"/apuestas",
+                      "method": "POST",
+                      "timeout": 0,
+                      "headers": {
+                        "Authorization": "Bearer "+token,
+                        "Content-Type": "application/json"
+
+                      },
+                      "data": {apuesta}
+                      });
+                      console.log(apuesta)
+
+                    promise.then(function (data) {
                         console.info("OK");
-                    }, function () {
+                    }, function (data) {
                         console.info("ERROR");
                     });
         }

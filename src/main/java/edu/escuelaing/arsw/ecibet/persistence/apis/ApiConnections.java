@@ -9,4 +9,6 @@ public interface ApiConnections {
 
     String getTablePremiereLeague();
     Set<ApuestaApi> getBets();
+
+    void guardarApuesta(String apuesta, int id);
 }

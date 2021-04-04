@@ -31,8 +31,8 @@ public class ApuestasServiceImpl implements ApuestasService {
         return apiConne.getBets();
     }
 
-//    @Override
-//    public void guardarApuesta(String apuesta, int id) {
-//       apiConne.guardarApuesta(apuesta,id);
-//    }
+    @Override
+    public void guardarApuesta(String apuesta, int id) {
+      apiConne.guardarApuesta(apuesta,id);
+    }
 }

@@ -9,6 +9,6 @@ public interface ApuestasService {
 
     String getTablePremierLeague();
     Set<ApuestaApi> getTableBets();
-//    void guardarApuesta(String apuesta, int id);
+    void guardarApuesta(String apuesta, int id);
 
 }

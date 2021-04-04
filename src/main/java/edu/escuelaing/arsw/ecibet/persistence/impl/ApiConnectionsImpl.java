@@ -162,4 +162,12 @@ public class ApiConnectionsImpl implements ApiConnections {
         //System.out.println("Esto es lo que deberia imprimir \n" + apuestasApi.toString() );
         return apuestasApi;
     }
+
+    @Override
+    public void guardarApuesta(String apuesta, int id) {
+        System.out.println("llega");
+        //JSONObject premio1Json = new JSONObject(apuesta);
+        //System.out.println(premio1Json.get("equipoApuesta"));
+        System.out.println(apuesta);
+    }
 }

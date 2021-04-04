@@ -63,8 +63,8 @@ var idPartido;
             "cuota": ${localStorage.getItem("cuota")},
             "valorApostado": ${plata}
         }`;
-        console.log(jsonApuesta)
-        //apiclient.guardarApuestas(localStorage.getItem("Authorization"),localStorage.getItem("id"),jsonApuesta);
+       // console.log(jsonApuesta)
+        apiclient.guardarApuestas(localStorage.getItem("Authorization"),localStorage.getItem("id"),jsonApuesta);
     }
 
     return{
