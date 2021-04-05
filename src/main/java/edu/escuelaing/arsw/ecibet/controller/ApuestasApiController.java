@@ -26,10 +26,14 @@ public class ApuestasApiController {
     public ResponseEntity<?> getTableBets() {
         return new ResponseEntity<>(apuesServi.getTableBets(), HttpStatus.ACCEPTED);
     }
+    @RequestMapping(method = RequestMethod.GET, value = "/apuestas")
+    public ResponseEntity<?> getTableApuestas() {
+        return new ResponseEntity<>(apuesServi.getTableApuestas(), HttpStatus.ACCEPTED);
+    }
 
     @RequestMapping(method = RequestMethod.POST, value = "/{id}/apuestas")
     public ResponseEntity<?> guardarApuesta(@RequestBody String apuesta, @PathVariable int id) {
-        System.out.println("apuestas api controler"+apuesta);
+       // System.out.println("apuestas api controler"+apuesta);
         apuesServi.guardarApuesta(apuesta,id);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }

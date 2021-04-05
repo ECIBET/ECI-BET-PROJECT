@@ -2,23 +2,17 @@ package edu.escuelaing.arsw.ecibet.persistence.impl;
 
 import edu.escuelaing.arsw.ecibet.model.ApuestaApi;
 import edu.escuelaing.arsw.ecibet.persistence.apis.ApiConnections;
-import edu.escuelaing.arsw.ecibet.services.ApuestasService;
 import org.json.JSONObject;
 import org.springframework.stereotype.Component;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.*;
 
 @Component
 public class ApiConnectionsImpl implements ApiConnections {
 
-    //private final ConcurrentHashMap<Tuple<String,String>,Blueprint> blueprints=new ConcurrentHashMap<>();
+   // private final Set<Apuesta> bets=new Set<>() {};
     //[{"author":"author2","points":[{"x":0,"y":1},{"x":1,"y":0}],"name":"Blueprint_b"}}]
-    private ArrayList<ApuestaApi> bets = new ArrayList<>();
+    private ArrayList<String> bets = new ArrayList<>();
 
     @Override
     public String getTablePremiereLeague() {
@@ -147,8 +141,6 @@ public class ApiConnectionsImpl implements ApiConnections {
         }
         int sizeIdApuestas = 0;
         while(keys.hasNext()) {
-
-
             String premio1 = tableJson.getJSONArray(keys.next()).get(0).toString();
             //System.out.println(premio1);
             JSONObject premio1Json = new JSONObject(premio1);
@@ -168,6 +160,15 @@ public class ApiConnectionsImpl implements ApiConnections {
         System.out.println("llega");
         //JSONObject premio1Json = new JSONObject(apuesta);
         //System.out.println(premio1Json.get("equipoApuesta"));
-        System.out.println(apuesta);
+        //System.out.println(apuesta);
+        JSONObject apu=new JSONObject(apuesta);
+        System.out.println(apu);
+        bets.add(apu.toString());
+        //System.out.println(bets);
+    }
+
+    @Override
+    public ArrayList<String> getTableApuestas() {
+        return bets;
     }
 }

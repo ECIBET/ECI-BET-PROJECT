@@ -1,8 +1,8 @@
 package edu.escuelaing.arsw.ecibet.persistence.apis;
 
 import edu.escuelaing.arsw.ecibet.model.ApuestaApi;
-import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.Set;
 
 public interface ApiConnections {
@@ -11,4 +11,6 @@ public interface ApiConnections {
     Set<ApuestaApi> getBets();
 
     void guardarApuesta(String apuesta, int id);
+
+    ArrayList<String> getTableApuestas();
 }

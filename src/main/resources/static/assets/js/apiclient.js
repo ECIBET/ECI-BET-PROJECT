@@ -70,7 +70,7 @@ var apiclient = (function () {
                         "Content-Type": "application/json"
 
                       },
-                      "data": {apuesta}
+                      "data": apuesta
                       });
                       console.log(apuesta)
 
