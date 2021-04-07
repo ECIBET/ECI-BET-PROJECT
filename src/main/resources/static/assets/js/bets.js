@@ -66,11 +66,15 @@ var idPartido;
        // console.log(jsonApuesta)
         apiclient.guardarApuestas(localStorage.getItem("Authorization"),localStorage.getItem("id"),jsonApuesta);
     }
+    askBet = function(){
+            apiclient.obtenerApuestasUsuario(localStorage.getItem("Authorization"),localStorage.getItem("id"));
+        }
 
     return{
        bet:bet,
        updateCuota : updateCuota,
-       saveBet : saveBet
+       saveBet : saveBet,
+       askBet : askBet
 
     }
 })();

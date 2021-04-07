@@ -12,7 +12,8 @@ public class ApiConnectionsImpl implements ApiConnections {
 
    // private final Set<Apuesta> bets=new Set<>() {};
     //[{"author":"author2","points":[{"x":0,"y":1},{"x":1,"y":0}],"name":"Blueprint_b"}}]
-    private ArrayList<String> bets = new ArrayList<>();
+    private Hashtable<Integer, ArrayList> apuestasU=new Hashtable<Integer, ArrayList>();
+    private ArrayList<String> bets;
 
     @Override
     public String getTablePremiereLeague() {
@@ -157,18 +158,32 @@ public class ApiConnectionsImpl implements ApiConnections {
 
     @Override
     public void guardarApuesta(String apuesta, int id) {
-        System.out.println("llega");
+
+        if(apuestasU.get(id)!=null){
+            JSONObject apu=new JSONObject(apuesta);
+            System.out.println(apu);
+            bets=apuestasU.get(id);
+            bets.add(apu.toString());
+        }else{
+            bets = new ArrayList<>();
+            JSONObject apu=new JSONObject(apuesta);
+            System.out.println(apu);
+            bets.add(apu.toString());
+        }
+        //System.out.println("llega");
         //JSONObject premio1Json = new JSONObject(apuesta);
         //System.out.println(premio1Json.get("equipoApuesta"));
         //System.out.println(apuesta);
-        JSONObject apu=new JSONObject(apuesta);
-        System.out.println(apu);
-        bets.add(apu.toString());
+
+        apuestasU.put(id,bets);
         //System.out.println(bets);
     }
 
     @Override
-    public ArrayList<String> getTableApuestas() {
-        return bets;
+    public Hashtable<Integer, ArrayList> getTableApuestas() {
+        return apuestasU;
+    }
+    public ArrayList getTableApuestasUsuario(int id) {
+        return apuestasU.get(id);
     }
 }

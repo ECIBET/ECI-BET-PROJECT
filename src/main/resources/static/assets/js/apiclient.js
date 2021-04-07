@@ -40,6 +40,15 @@ var apiclient = (function () {
               async: true
            });
         },
+        obtenerApuestasUsuario(token,id){
+                   jQuery.ajax({
+                     url: "/tables/apuestas/"+id,
+                     type: 'GET',
+                     headers: {"Authorization" : "Bearer "+token},
+                     contentType: "application/json",
+                     async: true
+                   });
+                },
         obtenerUsuarioCorreo(correo, token, callback){
                     //console.log(token);
                     var promise = $.ajax({

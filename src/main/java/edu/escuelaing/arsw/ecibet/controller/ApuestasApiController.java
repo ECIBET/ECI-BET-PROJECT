@@ -27,8 +27,12 @@ public class ApuestasApiController {
         return new ResponseEntity<>(apuesServi.getTableBets(), HttpStatus.ACCEPTED);
     }
     @RequestMapping(method = RequestMethod.GET, value = "/apuestas")
-    public ResponseEntity<?> getTableApuestas() {
+    public ResponseEntity<?> getTableApuestas( ) {
         return new ResponseEntity<>(apuesServi.getTableApuestas(), HttpStatus.ACCEPTED);
+    }
+    @RequestMapping(method = RequestMethod.GET, value = "/apuestas/{id}")
+    public ResponseEntity<?> getTableApuestasUsuario(@PathVariable int id) {
+        return new ResponseEntity<>(apuesServi.getTableApuestasUsuario(id), HttpStatus.ACCEPTED);
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/{id}/apuestas")

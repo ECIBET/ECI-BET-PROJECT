@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.Set;
 
 @Service
@@ -29,8 +30,11 @@ public class ApuestasServiceImpl implements ApuestasService {
     }
 
     @Override
-    public ArrayList<String> getTableApuestas() {
+    public Hashtable<Integer, ArrayList> getTableApuestas() {
         return apiConne.getTableApuestas();
+    }
+    public ArrayList getTableApuestasUsuario(int id) {
+        return apiConne.getTableApuestasUsuario(id);
     }
 
     @Override
