@@ -174,7 +174,6 @@ public class ApiConnectionsImpl implements ApiConnections {
         //JSONObject premio1Json = new JSONObject(apuesta);
         //System.out.println(premio1Json.get("equipoApuesta"));
         //System.out.println(apuesta);
-
         apuestasU.put(id,bets);
         //System.out.println(bets);
     }
