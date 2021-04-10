@@ -71,8 +71,9 @@ Para generar javadoc de las pruebas: ```mvn javadoc:test-javadoc```
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9c5a8e845ac94857ab11ec72cb0afd78)](https://www.codacy.com/gh/ECIBET/ECI-BET-PROJECT/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ECIBET/ECI-BET-PROJECT&amp;utm_campaign=Badge_Grade)
 
 ## Descripcion de la Metodologia :unlock:
-- Con esta guia hemos diseñado el plan de ejecucion del proyecto
-[![Taiga](https://i.ibb.co/0tfSV0d/taiga-1-2.png)](https://tree.taiga.io/project/verbocamacho-ecibeteci-bet-project/timeline)
+- Planeacion (link en la imagen)
+
+[![Taiga](https://devel.nuclex.org/logos/taiga-logo.jpg)](https://tree.taiga.io/project/verbocamacho-ecibeteci-bet-project/backlog)
 
 ![](img/puntos.jpg)
 ### Sprint 1 :100:
