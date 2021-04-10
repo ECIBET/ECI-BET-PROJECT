@@ -75,14 +75,6 @@ Para generar javadoc de las pruebas: ```mvn javadoc:test-javadoc```
 
 [![Taiga](https://devel.nuclex.org/logos/taiga-logo.jpg)](https://tree.taiga.io/project/verbocamacho-ecibeteci-bet-project/backlog)
 
-![](img/puntos.jpg)
-### Sprint 1 :100:
-![](img/sprint1.jpg)
-### Sprint 2 :100:
-![](img/sprint-2.jpg)
-### Sprint 3 :100:
-![](img/sprint-3.jpg)
-
 ## Construido
 [IntelliJ IDEA](https://www.jetbrains.com/es-es/idea/) Editor de JAVA donde se puede compilar el proyecto.
 
