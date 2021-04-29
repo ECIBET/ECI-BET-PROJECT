@@ -21,6 +21,8 @@ ECIBET es un aplicativo web para una empresa de apuestas enfocadas en el futbol 
 - Informacion total de las apuestas realizadas (Administrador)
 
 ### Manual de Usuario :lock:
+[![Manual](https://verbocamacho.gitbook.io/u/manual-de-usuario-ecibet)
+
 
 ## Arquitectura de Diseño
 ## Casos de uso
