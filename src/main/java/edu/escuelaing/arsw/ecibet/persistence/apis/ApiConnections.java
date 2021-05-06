@@ -1,6 +1,7 @@
 package edu.escuelaing.arsw.ecibet.persistence.apis;
 
 import edu.escuelaing.arsw.ecibet.model.ApuestaApi;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -8,7 +9,7 @@ import java.util.Set;
 
 public interface ApiConnections {
 
-    String getTablePremiereLeague();
+    JSONObject getTablePremiereLeague();
     Set<ApuestaApi> getBets();
 
     void guardarApuesta(String apuesta, int id);

@@ -93,7 +93,6 @@ var apiclient = (function () {
                       "data": apuesta
                       });
                       console.log(apuesta)
-                    console.log("Llego a apiclient giby HP")
 
                     promise.then(function (data) {
                         console.info("OK");
