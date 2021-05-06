@@ -30,15 +30,26 @@ var apiclient = (function () {
                     });
         },
         obtenerApuestas(callback,token){
-           jQuery.ajax({
-             url: "/tables/bets",
-             type: 'GET',
-             contentType: "application/json",
-             success: function (result) {
-                 callback(result);
-             },
-              async: true
-           });
+            jQuery.ajax({
+                url: "/tables/bets",
+                type: 'GET',
+                contentType: "application/json",
+                success: function (result) {
+                    callback(result);
+                },
+                async: true
+            });
+        },
+        obtenerStats(callback){
+            jQuery.ajax({
+                url: "/tables/stats",
+                type: 'GET',
+                contentType: "application/json",
+                success: function (result) {
+                    callback(result);
+                },
+                async: true
+            });
         },
         obtenerApuestasUsuario(callback,token,id){
                    var promise = $.ajax({
@@ -56,6 +67,7 @@ var apiclient = (function () {
                         console.info("Credenciales incorrectas");
                     });
                 },
+
         obtenerUsuarioCorreo(correo, token, callback){
                     //console.log(token);
                     var promise = $.ajax({
@@ -88,7 +100,6 @@ var apiclient = (function () {
                       "data": apuesta
                       });
                       console.log(apuesta)
-                    console.log("Llego a apiclient giby HP")
 
                     promise.then(function (data) {
                         console.info("OK");

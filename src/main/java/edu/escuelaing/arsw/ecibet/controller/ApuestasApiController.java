@@ -29,7 +29,7 @@ public class ApuestasApiController {
     }
     @RequestMapping(method = RequestMethod.GET, value = "/stats")
     public ResponseEntity<?> getTableStats() {
-        return new ResponseEntity<>(apuesServi.getTableStats(), HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(apuesServi.getTablePremierLeague().get("records").toString(), HttpStatus.ACCEPTED);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/apuestas")

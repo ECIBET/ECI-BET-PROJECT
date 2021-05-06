@@ -7,7 +7,6 @@ import edu.escuelaing.arsw.ecibet.persistence.ApuestaRepository;
 import edu.escuelaing.arsw.ecibet.persistence.apis.ApiConnections;
 import edu.escuelaing.arsw.ecibet.services.ApuestasService;
 import org.json.JSONObject;
-import java.text.DateFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -26,8 +25,9 @@ public class ApuestasServiceImpl implements ApuestasService {
     ApuestaRepository apuestaRepository;
 
     @Override
-    public String getTablePremierLeague() {
+    public JSONObject getTablePremierLeague() {
         //String to object table premiere league
+        System.out.println(apiConne.getTablePremiereLeague());
         return apiConne.getTablePremiereLeague();
     }
 
@@ -76,11 +76,5 @@ public class ApuestasServiceImpl implements ApuestasService {
         apuestaRepository.save(apuestaGuardar);
     }
 
-    @Override
-    public String getTableStats() {
-        Gson send = new Gson();
-        String jsonToString = null;
-        jsonToString = send.toJson(apiConne.getTablePremiereLeague());
-        return jsonToString;
-    }
+
 }

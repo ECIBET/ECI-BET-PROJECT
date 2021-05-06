@@ -36,7 +36,8 @@
     <![endif]-->
 
 </head>
-<body>
+<body onload="app.onloadStat()">
+
 <!-- Preloader -->
 <div class="preloader">
     <div class="spinner">
@@ -193,11 +194,9 @@
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                     <div class="table-responsive">
-                                        <table class="table table-hover table-borderless table-striped">
+                                        <table class="table table-hover table-borderless table-striped" id="statTable">
                                             <thead>
                                             <tr>
-                                                <th scope="col">Pos</th>
-                                                <th scope="col">Logo</th>
                                                 <th scope="col">Team</th>
                                                 <th scope="col">PJ</th>
                                                 <th scope="col">PG</th>
@@ -210,258 +209,8 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
-                                                <td>app.pos</td>
-                                                <td>
-                                                    <img src="assets/images/icons/teams/1.png" alt=""><br>
-                                                </td>
-                                                <td>
-                                                    <strong>Fulham</strong>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">2.40</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">3.20</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">3.00</a>
-                                                </td>
-                                                <td>
-                                                    <a href="/tables/premierleague">
-                                                        <img src="assets/images/icons/stat.png" alt="">
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>06:30 <br> 10th Apr</td>
-                                                <td>
-                                                    <img src="assets/images/icons/teams/8.png" alt=""><br>
-                                                    <img src="assets/images/icons/teams/18.png" alt="">
-                                                </td>
-                                                <td>
-                                                    <strong>Manchester City</strong>
-                                                    <strong>Leeds</strong>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">1.22</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">6.50</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">11.00</a>
-                                                </td>
-                                                <td>
-                                                    <a href="/tables/premierleague">
-                                                        <img src="assets/images/icons/stat.png" alt="">
-                                                    </a>
-                                                </td>
-
-                                            </tr>
-                                            <tr>
-                                                <td>09:00 <br> 10th Apr</td>
-                                                <td>
-                                                    <img src="assets/images/icons/teams/7.png" alt=""><br>
-                                                    <img src="assets/images/icons/teams/6.png" alt="">
-                                                </td>
-                                                <td>
-                                                    <strong>Liverpool</strong>
-                                                    <strong>Aston Villa</strong>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">1.40</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">4.75</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">7.50</a>
-                                                </td>
-                                                <td>
-                                                    <a href="/tables/premierleague">
-                                                        <img src="assets/images/icons/stat.png" alt="">
-                                                    </a>
-                                                </td>
-
-                                            </tr>
-                                            <tr>
-                                                <td>11:30 <br> 10th Apr</td>
-                                                <td>
-                                                    <img src="assets/images/icons/teams/4.png" alt=""><br>
-                                                    <img src="assets/images/icons/teams/3.png" alt="">
-                                                </td>
-                                                <td>
-                                                    <strong>Crystal Palace</strong>
-                                                    <strong>Chelsea</strong>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">9.50</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">4.00</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">1.40</a>
-                                                </td>
-                                                <td>
-                                                    <a href="/tables/premierleague">
-                                                        <img src="assets/images/icons/stat.png" alt="">
-                                                    </a>
-                                                </td>
-
-                                            </tr>
-                                            <tr>
-                                                <td>06:00 <br> 11th Apr</td>
-                                                <td>
-                                                    <img src="assets/images/icons/teams/17.png" alt=""><br>
-                                                    <img src="assets/images/icons/teams/12.png" alt="">
-                                                </td>
-                                                <td>
-                                                    <strong>Burnley</strong>
-                                                    <strong>Newcastle</strong>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">2.15</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">3.10</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">3.60</a>
-                                                </td>
-                                                <td>
-                                                    <a href="/tables/premierleague">
-                                                        <img src="assets/images/icons/stat.png" alt="">
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>08:00 <br> 11th Apr</td>
-                                                <td>
-                                                    <img src="assets/images/icons/teams/14.png" alt=""><br>
-                                                    <img src="assets/images/icons/teams/10.png" alt="">
-                                                </td>
-                                                <td>
-                                                    <strong>West Ham</strong>
-                                                    <strong>Leicester</strong>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">2.90</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">3.40</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">2.37</a>
-                                                </td>
-                                                <td>
-                                                    <a href="/tables/premierleague">
-                                                        <img src="assets/images/icons/stat.png" alt="">
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>10:30 <br> 11th Apr</td>
-                                                <td>
-                                                    <img src="assets/images/icons/teams/13.png" alt=""><br>
-                                                    <img src="assets/images/icons/teams/9.png" alt="">
-                                                </td>
-                                                <td>
-                                                    <strong>Tottenham</strong>
-                                                    <strong>Manchester United</strong>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">2.80</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">3.40</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">2.40</a>
-                                                </td>
-                                                <td>
-                                                    <a href="/tables/premierleague">
-                                                        <img src="assets/images/icons/stat.png" alt="">
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>13:00 <br> 11th Apr</td>
-                                                <td>
-                                                    <img src="assets/images/icons/teams/19.png" alt=""><br>
-                                                    <img src="assets/images/icons/teams/2.png" alt="">
-                                                </td>
-                                                <td>
-                                                    <strong>Sheffield United</strong>
-                                                    <strong>Arsenal</strong>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">6.50</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">3.75</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">1.55</a>
-                                                </td>
-                                                <td>
-                                                    <a href="/tables/premierleague">
-                                                        <img src="assets/images/icons/stat.png" alt="">
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>12:00 <br> 12th Apr</td>
-                                                <td>
-                                                    <img src="assets/images/icons/teams/15.png" alt=""><br>
-                                                    <img src="assets/images/icons/teams/11.png" alt="">
-                                                </td>
-                                                <td>
-                                                    <strong>West Brom</strong>
-                                                    <strong>Southampton</strong>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">4.00</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">3.20</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">2.05</a>
-                                                </td>
-                                                <td>
-                                                    <a href="/tables/premierleague">
-                                                        <img src="assets/images/icons/stat.png" alt="">
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>14:15 <br> 12th Apr</td>
-                                                <td>
-                                                    <img src="assets/images/icons/teams/16.png" alt=""><br>
-                                                    <img src="assets/images/icons/teams/5.png" alt="">
-                                                </td>
-                                                <td>
-                                                    <strong>Brighton</strong>
-                                                    <strong>Everton</strong>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">2.25</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">3.30</a>
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btnn">3.10</a>
-                                                </td>
-                                                <td>
-                                                    <a href="/tables/premierleague">
-                                                        <img src="assets/images/icons/stat.png" alt="">
-                                                    </a>
-                                                </td>
-                                            </tr>
                                             </tbody>
+
                                         </table>
                                     </div>
                                 </div>
@@ -685,7 +434,11 @@
 <script src="assets/js/scrollUp.min.js"></script>
 <script src="assets/js/jquery.accrue.min.js"></script>
 <script src="assets/js/jquery.nice-select.min.js"></script>
-
+<script src="assets/js/script.js"></script>
+<script src="assets/js/login.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/apiclient.js"></script>
+<script src="assets/js/bets.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 
