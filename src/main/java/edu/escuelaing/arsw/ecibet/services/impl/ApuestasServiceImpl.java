@@ -54,7 +54,7 @@ public class ApuestasServiceImpl implements ApuestasService {
         apuestas = (List<Apuesta>) apuestaRepository.findAll();
         ArrayList<Apuesta> apuestasId = new ArrayList<Apuesta>();
         for (int i = 0 ; i< apuestas.size(); i++){
-            if (apuestas.get(i).getId() == id){
+            if (apuestas.get(i).getUsuarios() == id){
                 apuestasId.add(apuestas.get(i));
             }
         }

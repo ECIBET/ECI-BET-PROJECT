@@ -157,28 +157,6 @@ public class ApiConnectionsImpl implements ApiConnections {
     }
 
     @Override
-    public void guardarApuesta(String apuesta, int id) {
-
-        if(apuestasU.get(id)!=null){
-            JSONObject apu=new JSONObject(apuesta);
-            System.out.println(apu);
-            bets=apuestasU.get(id);
-            bets.add(apu.toString());
-        }else{
-            bets = new ArrayList<>();
-            JSONObject apu=new JSONObject(apuesta);
-            System.out.println(apu);
-            bets.add(apu.toString());
-        }
-        //System.out.println("llega");
-        //JSONObject premio1Json = new JSONObject(apuesta);
-        //System.out.println(premio1Json.get("equipoApuesta"));
-        //System.out.println(apuesta);
-        apuestasU.put(id,bets);
-        //System.out.println(bets);
-    }
-
-    @Override
     public Hashtable<Integer, ArrayList> getTableApuestas() {
         return apuestasU;
     }

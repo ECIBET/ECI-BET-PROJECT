@@ -68,7 +68,7 @@ var idPartido;
     }
     askBet = function(){
             apiclient.obtenerApuestasUsuario(localStorage.getItem("Authorization"),localStorage.getItem("id"));
-        }
+    }
 
     return{
        bet:bet,

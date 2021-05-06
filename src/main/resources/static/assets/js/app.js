@@ -27,6 +27,15 @@ var app = (function () {
         }
 
     }
+    function onloadUserBets() {
+        bets.askBet()
+        if (localStorage.getItem("Authorization") !== null) {
+            onloadUsuario();
+            return
+        }
+
+    }
+
 
     function onloadUsuario() {
             apiclient.obtenerUsuarioCorreo(localStorage.getItem("correo"), localStorage.getItem("Authorization"), cargarInformacion);
