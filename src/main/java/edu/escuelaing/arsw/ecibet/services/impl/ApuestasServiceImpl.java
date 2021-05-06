@@ -42,7 +42,7 @@ public class ApuestasServiceImpl implements ApuestasService {
         Gson send = new Gson();
         String jsonToString = null;
         apuestas = (List<Apuesta>) apuestaRepository.findAll();
-        System.out.println(apuestaRepository.findAll().getClass() + "Claseeeee");
+        //System.out.println(apuestaRepository.findAll().getClass() + "Claseeeee");
         jsonToString = send.toJson(apuestas);
         return jsonToString;
 
@@ -75,5 +75,13 @@ public class ApuestasServiceImpl implements ApuestasService {
                                             (String)stringJson.get("equipoApuesta"),1,(int)stringJson.get("idPartido"),(int)stringJson.get("idUser"));
 
         apuestaRepository.save(apuestaGuardar);
+    }
+
+    @Override
+    public String getTableStats() {
+        Gson send = new Gson();
+        String jsonToString = null;
+        jsonToString = send.toJson(apiConne.getTablePremiereLeague());
+        return jsonToString;
     }
 }
