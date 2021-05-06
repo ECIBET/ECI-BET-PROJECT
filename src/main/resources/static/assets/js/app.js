@@ -4,7 +4,7 @@ var app = (function () {
             token = newToken.access_token;
             correo = localStorage.getItem("correo");
             localStorage.setItem("Authorization", token);
-            location.href = "/index.html";
+            location.href = "/indexLogin.html";
 
     }
     function onload() {

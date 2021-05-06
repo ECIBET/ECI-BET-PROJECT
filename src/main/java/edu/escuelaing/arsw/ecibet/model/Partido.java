@@ -18,14 +18,14 @@ public class Partido implements Serializable {
     @Column(updatable = true)
     private int marcadorB;
     @Column(updatable = false)
-    private Date fecha;
+    private String fecha;
     @Column(updatable = true)
     private boolean estado;
     private String nombreDeporte;
     private String tipoEncuentro;
 
 
-    public Partido(int id, int marcadorA, int marcadorB, Date fecha, boolean estado, String nombreDeporte, String tipoEncuentro) {
+    public Partido(int id, int marcadorA, int marcadorB, String fecha, boolean estado, String nombreDeporte, String tipoEncuentro) {
         this.id = id;
         this.marcadorA = marcadorA;
         this.marcadorB = marcadorB;
@@ -59,11 +59,11 @@ public class Partido implements Serializable {
         this.marcadorB = marcadorB;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

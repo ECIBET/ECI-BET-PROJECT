@@ -1,5 +1,6 @@
 package edu.escuelaing.arsw.ecibet.services;
 
+import edu.escuelaing.arsw.ecibet.model.Apuesta;
 import edu.escuelaing.arsw.ecibet.model.ApuestaApi;
 
 import java.util.ArrayList;
@@ -10,8 +11,8 @@ public interface ApuestasService {
 
     String getTablePremierLeague();
     Set<ApuestaApi> getTableBets();
-    Hashtable<Integer, ArrayList> getTableApuestas();
-    ArrayList getTableApuestasUsuario(int id);
-    void guardarApuesta(String apuesta, int id);
+    String getTableApuestas();
+    String getTableApuestasUsuario(int id);
+    void guardarApuesta(String apuesta);
 
 }

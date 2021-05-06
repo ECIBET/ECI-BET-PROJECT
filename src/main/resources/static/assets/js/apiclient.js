@@ -68,7 +68,6 @@ var apiclient = (function () {
         },
         guardarApuestas(token,id,apuesta){
         //var pr=JSON.stringify(apuesta)
-
             //console.log(apuesta);
             var promise = $.ajax({
                       "url": "/tables/"+id+"/apuestas",
@@ -82,6 +81,7 @@ var apiclient = (function () {
                       "data": apuesta
                       });
                       console.log(apuesta)
+                    console.log("Llego a apiclient giby HP")
 
                     promise.then(function (data) {
                         console.info("OK");

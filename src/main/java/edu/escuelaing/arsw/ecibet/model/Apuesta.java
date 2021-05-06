@@ -14,29 +14,40 @@ public class Apuesta implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
     @Column(updatable = false)
-    private Date fecha;
+    private String fecha;
     @Column(updatable = true)
-    private int cuota;
+    private float cuota;
     private int valorApostado;
     @Column(updatable = true)
     private boolean estado;
+    private String equipoApuesta;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Administrador> administradores = new CopyOnWriteArrayList<>();
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Partido> partidos = new CopyOnWriteArrayList<>();
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Usuario> usuarios = new CopyOnWriteArrayList<>();
+    private int administrador;
+    private int partidos;
+    private int usuarios;
 
     public Apuesta(){
 
     }
-    public Apuesta(int id, Date fecha, int marcadorA, int marcadorB, int ganancia, int valorApostado, boolean estado) {
+
+    public Apuesta(int id, String fecha, float cuota, int valorApostado, boolean estado) {
         this.id = id;
         this.fecha = fecha;
-        this.cuota = ganancia;
+        this.cuota = cuota;
         this.valorApostado = valorApostado;
         this.estado = estado;
+    }
+
+    public Apuesta(int i, String fecha, float cuota, int valorApostado, boolean estado, String equipoApuesta, int administrador, int partido, int usuario) {
+        this.id = id;
+        this.fecha = fecha;
+        this.cuota = cuota;
+        this.valorApostado = valorApostado;
+        this.estado = estado;
+        this.equipoApuesta = equipoApuesta;
+        this.administrador = administrador;
+        this.partidos = partido;
+        this.usuarios =  usuario;
     }
 
     public int getId() {
@@ -47,52 +58,51 @@ public class Apuesta implements Serializable {
         this.id = id;
     }
 
-    public List<Administrador> getAdministradores() {
-        return administradores;
-    }
-
-    public void setAdministradores(List<Administrador> administradores) {
-        this.administradores = administradores;
-    }
-
-    public List<Usuario> getUsuarios() {
-        return usuarios;
-    }
-
-    public void setUsuarios(List<Usuario> usuarios) {
-        this.usuarios = usuarios;
-    }
-
-    public List<Administrador> getApuestas() {
-        return administradores;
-    }
-
-    public void setApuestas(List<Administrador> administradores) {
-        this.administradores = administradores;
-    }
-
-    public List<Partido> getPartidos() {
-        return partidos;
-    }
-
-    public void setPartidos(List<Partido> partidos) {
-        this.partidos = partidos;
-    }
-
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
+    public String getEquipoApuesta() {
+        return equipoApuesta;
+    }
 
-    public int getCuota() {
+    public void setEquipoApuesta(String equipoApuesta) {
+        this.equipoApuesta = equipoApuesta;
+    }
+
+    public int getAdministrador() {
+        return administrador;
+    }
+
+    public void setAdministrador(int administrador) {
+        this.administrador = administrador;
+    }
+
+    public int getPartidos() {
+        return partidos;
+    }
+
+    public void setPartidos(int partidos) {
+        this.partidos = partidos;
+    }
+
+    public int getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(int usuarios) {
+        this.usuarios = usuarios;
+    }
+
+    public float getCuota() {
         return cuota;
     }
 
-    public void setCuota(int cuota) {
+    public void setCuota(float cuota) {
         this.cuota = cuota;
     }
 

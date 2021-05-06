@@ -1,5 +1,6 @@
 package edu.escuelaing.arsw.ecibet.controller;
 
+import edu.escuelaing.arsw.ecibet.model.Apuesta;
 import edu.escuelaing.arsw.ecibet.services.ApuestasService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -30,6 +31,7 @@ public class ApuestasApiController {
     public ResponseEntity<?> getTableApuestas( ) {
         return new ResponseEntity<>(apuesServi.getTableApuestas(), HttpStatus.ACCEPTED);
     }
+
     @RequestMapping(method = RequestMethod.GET, value = "/apuestas/{id}")
     public ResponseEntity<?> getTableApuestasUsuario(@PathVariable int id) {
         return new ResponseEntity<>(apuesServi.getTableApuestasUsuario(id), HttpStatus.ACCEPTED);
@@ -37,8 +39,8 @@ public class ApuestasApiController {
 
     @RequestMapping(method = RequestMethod.POST, value = "/{id}/apuestas")
     public ResponseEntity<?> guardarApuesta(@RequestBody String apuesta, @PathVariable int id) {
-       // System.out.println("apuestas api controler"+apuesta);
-        apuesServi.guardarApuesta(apuesta,id);
+        System.out.println("apuestas api controler"+apuesta);
+        apuesServi.guardarApuesta(apuesta);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }
 
