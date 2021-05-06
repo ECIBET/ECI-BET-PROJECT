@@ -15,4 +15,5 @@ public interface ApuestasService {
     String getTableApuestasUsuario(int id);
     void guardarApuesta(String apuesta);
 
+    String getTableStats();
 }
