@@ -2,13 +2,12 @@
 
 ## Informacion General
 - Curso: Arquitectura de Software: 2021 - 1
-- Integrantes: Nikolai Bermudez - Verbo Camacho - Miguel Castellanos
+- Integrantes: Nikolai Bermudez - Verbo Camacho
 - Profesor: Sebastian Henao Pinzon
 
 ## Roles :bell:
 - Nikolai Bermudez Vega: Scrum Master
 - Verbo Camacho: Developer
-- Miguel Castellanos: Developer
 - Sebastian Henao Pinzon: Product Owner
 
 ## Descripción del proyecto :currency_exchange:
