@@ -64,9 +64,7 @@ public class ApuestasServiceImpl implements ApuestasService {
 
     @Override
     public void guardarApuesta(String apuesta) {
-        System.out.println("Este hijo de perra");
         JSONObject stringJson = new JSONObject(apuesta);
-        System.out.println(stringJson.toString());
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         Date date = Calendar.getInstance().getTime();
         String fecha = formatter.format(date);
