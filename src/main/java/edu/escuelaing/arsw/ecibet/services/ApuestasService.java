@@ -12,7 +12,7 @@ public interface ApuestasService {
     String getTablePremierLeague();
     Set<ApuestaApi> getTableBets();
     String getTableApuestas();
-    String getTableApuestasUsuario(int id);
+    ArrayList<Apuesta> getTableApuestasUsuario(int id);
     void guardarApuesta(String apuesta);
 
     String getTableStats();

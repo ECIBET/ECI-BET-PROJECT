@@ -87,7 +87,7 @@
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
                 <div class="header-btn justify-content-end">
-                    <a class="bttn-small btn-fill" onclick="bets.askBet()"><i href="/" class="fa fa-key"></i>Ver Apuestas</a>
+                    <a class="bttn-small btn-fill" onclick="bets.askBet()" href="/userBets.html" ><i class="fa fa-key"></i>Ver Apuestas</a>
                 </div>
                 <div class="header-btn justify-content-end">
                     <a class="bttn-small btn-fill" onclick="login.cerrarSesion()"><i class="fa fa-key"></i>Logout</a>
@@ -148,27 +148,9 @@
             <div class="col-xl-8 col-lg-8 col-md-6 col-sm-6">
                 <div class="main-content-slider owl-carousel">
                     <div class="single-slider" style="background: url('assets/images/banner/hero-2.jpg') no-repeat center / cover;">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <h3>Lever of Soccer</h3>
-                                <p>Amet consectetur adipisicing elit. Debitis, et totam nisi est praesentium maxime mollitia earum aut temporibus aliquid esse eveniet impedit? Doloribus</p>
-
-                                <div class="hero-score">Venture <span>2.5</span></div>
-                                <div class="hero-score">Lebor <span>8.3</span></div>
-                                <div class="hero-score">122+ Bets</div>
-                            </div>
-                        </div>
                     </div>
                     <div class="single-slider" style="background: url('assets/images/banner/hero-1.jpg') no-repeat center / cover;">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <h3>Lever of Games</h3>
-                                <p>Amet consectetur adipisicing elit. Debitis, et totam nisi est praesentium maxime mollitia earum aut temporibus aliquid esse eveniet impedit? Doloribus</p>
-                                <div class="hero-score">Venture <span>2.5</span></div>
-                                <div class="hero-score">Lebor <span>8.3</span></div>
-                                <div class="hero-score">122+ Bets</div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
                 <div class="game-box" >
@@ -177,6 +159,7 @@
                             <h3>Football Games</h3>
                             <span>Dark Mode</span><input type="checkbox" data-toggle="modal" data-target="#myModal2" id="switch"/><label for="switch">Toggle</label>
                         </div>
+
                         <div class="card-body">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
@@ -344,12 +327,28 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success" id="botonapuesta" data-dismiss="modal" onclick="bets.saveBet(document.getElementById('pagoFinal').value, document.getElementById('plata').value)">Apostar</button>
+                    <button type="button" data-toggle="modal" data-target="#apuestaRealizada" class="btn btn-success" id="botonapuesta" data-dismiss="modal" onclick="bets.saveBet(document.getElementById('pagoFinal').value, document.getElementById('plata').value)">Apostar</button>
                 </div>
             </div>
         </div>
     </div>
 </section>
+        <div class="modal fade" id="apuestaRealizada" role="dialog">
+            <div class="modal-dialog ">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <h5 style="text-align: center" >Apuesta realizada con exito</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success"  data-dismiss="modal">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 

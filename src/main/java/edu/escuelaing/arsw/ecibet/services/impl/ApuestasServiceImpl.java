@@ -47,7 +47,7 @@ public class ApuestasServiceImpl implements ApuestasService {
         return jsonToString;
 
     }
-    public String getTableApuestasUsuario(int id) {
+    public ArrayList<Apuesta> getTableApuestasUsuario(int id) {
         List<Apuesta> apuestas = null;
         Gson send = new Gson();
         String jsonToString = null;
@@ -58,8 +58,7 @@ public class ApuestasServiceImpl implements ApuestasService {
                 apuestasId.add(apuestas.get(i));
             }
         }
-        jsonToString = send.toJson(apuestasId);
-        return jsonToString;
+        return apuestasId;
     }
 
     @Override

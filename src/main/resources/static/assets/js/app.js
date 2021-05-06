@@ -49,6 +49,7 @@ var app = (function () {
     return {
         getToken: getToken,
         onload : onload,
-        onloadBets : onloadBets
+        onloadBets : onloadBets,
+        onloadUserBets : onloadUserBets
     }
 })();

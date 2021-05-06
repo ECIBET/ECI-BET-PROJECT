@@ -9,6 +9,41 @@ var idPartido;
             alert("Debe ingresar algún nombre, vuelva a intentarlo")
         }
     }
+    askBet = function(){
+        if (localStorage.getItem("Authorization") !== "") {
+            apiclient.obtenerApuestasUsuario(drawUserBets,localStorage.getItem("Authorization"),localStorage.getItem("id"));
+        } else {
+            alert("La informacion del usuario es incorrecta")
+        }
+
+    }
+
+    drawUserBets = function(resp){
+        $("#betsUser tbody").empty();
+        //console.log(typeof(resp));
+        if(resp !== undefined){
+            var data = resp.map((info) => {
+                return {
+                    idApuesta: info.id,
+                    fecha: info.fecha,
+                    cuota: info.cuota,
+                    valorApostado: info.valorApostado,
+                    estado: info.estado,
+                    equipoApuesta: info.equipoApuesta,
+                    administrador: info.administrador,
+                    partidos: info.partidos,
+                    usuarios: info.usuarios
+                }
+            })
+            data.map((info) => {
+                $("#betsUser > tbody:last").append($("<tr><td>" + info.fecha + "</td><td>" + info.cuota +
+                    "</td><td>" + info.valorApostado +"</td><td>"+ info.estado +
+                    "</td><td>" + info.equipoApuesta + "</td></tr>"))
+            })
+        } else {
+            alert("No hay apuestas registradas")
+        }
+    }
 
     drawBet = function(resp){
         $("#betsTable tbody").empty();
@@ -66,15 +101,14 @@ var idPartido;
        // console.log(jsonApuesta)
         apiclient.guardarApuestas(localStorage.getItem("Authorization"),localStorage.getItem("id"),jsonApuesta);
     }
-    askBet = function(){
-            apiclient.obtenerApuestasUsuario(localStorage.getItem("Authorization"),localStorage.getItem("id"));
-    }
+
 
     return{
        bet:bet,
        updateCuota : updateCuota,
        saveBet : saveBet,
-       askBet : askBet
+       askBet : askBet,
+        drawUserBets: drawUserBets
 
     }
 })();

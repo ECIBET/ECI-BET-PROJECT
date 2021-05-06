@@ -40,14 +40,21 @@ var apiclient = (function () {
               async: true
            });
         },
-        obtenerApuestasUsuario(token,id){
-                   jQuery.ajax({
+        obtenerApuestasUsuario(callback,token,id){
+                   var promise = $.ajax({
                      url: "/tables/apuestas/"+id,
                      type: 'GET',
                      headers: {"Authorization" : "Bearer "+token},
-                     contentType: "application/json",
-                     async: true
+                     contentType: "application/json"
                    });
+                    promise.then(function (data) {
+                        console.info("OK en apuestas usuario");
+                        console.log(data)
+                        callback(data);
+                    }, function (data) {
+                        console.info(data)
+                        console.info("Credenciales incorrectas");
+                    });
                 },
         obtenerUsuarioCorreo(correo, token, callback){
                     //console.log(token);
