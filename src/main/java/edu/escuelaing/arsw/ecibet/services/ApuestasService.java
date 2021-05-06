@@ -1,5 +1,6 @@
 package edu.escuelaing.arsw.ecibet.services;
 
+import edu.escuelaing.arsw.ecibet.model.Apuesta;
 import edu.escuelaing.arsw.ecibet.model.ApuestaApi;
 import org.json.JSONObject;
 
