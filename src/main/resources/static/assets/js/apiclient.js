@@ -30,15 +30,26 @@ var apiclient = (function () {
                     });
         },
         obtenerApuestas(callback,token){
-           jQuery.ajax({
-             url: "/tables/bets",
-             type: 'GET',
-             contentType: "application/json",
-             success: function (result) {
-                 callback(result);
-             },
-              async: true
-           });
+            jQuery.ajax({
+                url: "/tables/bets",
+                type: 'GET',
+                contentType: "application/json",
+                success: function (result) {
+                    callback(result);
+                },
+                async: true
+            });
+        },
+        obtenerStats(callback){
+            jQuery.ajax({
+                url: "/tables/stats",
+                type: 'GET',
+                contentType: "application/json",
+                success: function (result) {
+                    callback(result);
+                },
+                async: true
+            });
         },
         obtenerApuestasUsuario(token,id){
                    jQuery.ajax({
@@ -49,6 +60,7 @@ var apiclient = (function () {
                      async: true
                    });
                 },
+
         obtenerUsuarioCorreo(correo, token, callback){
                     //console.log(token);
                     var promise = $.ajax({
