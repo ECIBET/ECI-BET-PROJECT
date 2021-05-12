@@ -1,6 +1,21 @@
 var apiclient = (function () {
 
     return {
+        crearUsuario: function (nombre, cedula, usuario, email, password){
+            var promise = $.ajax({
+                url: "/usuarios",
+                method: "POST",
+                data: JSON.stringify([nombre, cedula, usuario, email, password]),
+                contentType: "application/json"
+            });
+            promise.then(function () {
+                console.info("OK");
+                //callback();
+            }, function () {
+                console.info("ERROR");
+            });
+        },
+
         obtenerTocken(correo,password,callback){
         var promise = $.ajax({
           "url": "/oauth/token",

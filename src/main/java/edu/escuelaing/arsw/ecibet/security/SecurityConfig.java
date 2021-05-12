@@ -1,3 +1,4 @@
+
 package edu.escuelaing.arsw.ecibet.security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -37,4 +38,23 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 }
+
+
+
+//    @Override
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        auth.inMemoryAuthentication()
+//                .withUser("user1").password("123").roles("APPRENTICE")
+//                .and()
+//                .withUser("user2").password("123").roles("SENSEI");
+//    }
+//
+//    @Override
+//    public void configure(HttpSecurity http) throws Exception {
+//        http.authorizeRequests()
+//                .antMatchers("/**").hasRole("SENSEI")
+//                .and().formLogin();
+//    }
+
+
 

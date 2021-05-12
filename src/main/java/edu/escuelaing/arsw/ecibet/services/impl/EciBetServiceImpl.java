@@ -10,6 +10,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @Service
 public class EciBetServiceImpl implements EciBetService {
 
@@ -45,8 +48,11 @@ public class EciBetServiceImpl implements EciBetService {
     @Override
     public void agregarUsuario(String[] datos) {
         System.out.println(datos[3]);
-        String password = passworEncoder.encode(datos[3]);
-        Usuario newUsuario = new Usuario(0, datos[1], password, datos[2], datos[4], datos[5], true);
+        System.out.println(datos[0]);
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        String password = passworEncoder.encode(datos[4]);
+        Usuario newUsuario = new Usuario(0,datos[2],password,datos[3], datos[1], formatter.format(date),true,"USER");
         saveUsuario(newUsuario);
     }
 

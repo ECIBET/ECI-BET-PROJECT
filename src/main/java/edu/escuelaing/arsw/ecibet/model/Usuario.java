@@ -26,13 +26,14 @@ public class Usuario implements Serializable {
     private String fechaNacimiento;
     @Column(updatable = true)
     private boolean enabled;
+    private String rol;
 
     public Usuario() {
 
     }
 
     public Usuario(int saldo, String username, String password, String correo, String tipoId,
-                   String fechaNacimiento, Boolean enabled){
+                   String fechaNacimiento, Boolean enabled, String rol){
         this.saldo = saldo;
         this.username = username;
         this.password = password;
@@ -40,6 +41,7 @@ public class Usuario implements Serializable {
         this.tipoId = tipoId;
         this.fechaNacimiento = fechaNacimiento;
         this.enabled = enabled;
+        this.rol = rol;
     }
 
 
@@ -105,5 +107,13 @@ public class Usuario implements Serializable {
 
     public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 }

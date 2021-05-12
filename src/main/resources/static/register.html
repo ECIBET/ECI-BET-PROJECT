@@ -131,38 +131,41 @@
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="account-form">
                                     <div class="title">
-                                        <h3>Create your account</h3>
+                                        <h3>Crear Cuenta</h3>
                                     </div>
+                                    <!--
                                     <div class="via-login">
                                         <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i>Signup with Facebook</a>
                                         <a href="#" class="google-plus-bg"><i class="fa fa-google"></i>Signup with Google</a>
                                     </div>
+                                    -->
                                     <form action="#">
                                         <div class="row">
-                                            <div class="col-xl-6">
-                                                <input type="text" placeholder="First Name">
-                                            </div>
-                                            <div class="col-xl-6">
-                                                <input type="text" placeholder="Last Name">
+                                            <div class="col-xl-12">
+                                                <input id="name" type="text" placeholder="Nombre Completo">
                                             </div>
                                             <div class="col-xl-12">
-                                                <input type="text" placeholder="Username">
+                                                <input id="identificacion" type="text" placeholder="Cedula o Identificacion">
                                             </div>
                                             <div class="col-xl-12">
-                                                <input type="email" placeholder="Email">
+                                                <input id="username" type="text" placeholder="Nombre de usuario">
                                             </div>
                                             <div class="col-xl-12">
-                                                <input type="password" placeholder="Password">
+                                                <input id="email" type="email" placeholder="Email">
                                             </div>
                                             <div class="col-xl-12">
-                                                <p>By signing up to betsb you confirm that you agree with the <a href="#">member terms and conditions</a></p>
+                                                <input id="password" type="password" placeholder="Contraseña">
                                             </div>
                                             <div class="col-xl-12">
-                                                <button type="submit" class="bttn-small btn-fill w-100">Create my account</button>
+                                                <p>Creando una cuenta usted confirma que esta de acuerdo con los <a href="#">terminos y condiciones de miembro</a></p>
                                             </div>
                                             <div class="col-xl-12">
-                                                <p><a href="login.html">Do you already have an account?</a></p>
+                                                <button type="submit" class="bttn-small btn-fill w-100" onclick="signup.signup()">Crear mi cuenta</button>
                                             </div>
+                                            <div class="col-xl-12">
+                                                <p><a href="login.html">Ya tiene una cuenta registrada?</a></p>
+                                            </div>
+
                                         </div>
                                     </form>
                                 </div>
@@ -250,6 +253,9 @@
     <script src="assets/js/jquery.nice-select.min.js"></script>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/signup.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/apiclient.js"></script>
 </body>
 
 <!-- Mirrored from rexbd.net/html/betsb/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Mar 2021 05:52:25 GMT -->

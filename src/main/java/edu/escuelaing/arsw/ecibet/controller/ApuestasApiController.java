@@ -33,7 +33,7 @@ public class ApuestasApiController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/apuestas")
-    public ResponseEntity<?> getTableApuestas( ) {
+    public ResponseEntity<?> getTableApuestas() {
         return new ResponseEntity<>(apuesServi.getTableApuestas(), HttpStatus.ACCEPTED);
     }
 
