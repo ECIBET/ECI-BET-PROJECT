@@ -91,6 +91,7 @@ var idPartido;
         //console.log(localStorage.getItem("cuota"))
         //console.log(equipoCuota)
         //console.log(plata)
+        console.log(idPartido)
         var jsonApuesta = `{
             "idUser": ${localStorage.getItem("id")},
             "idPartido": ${idPartido},

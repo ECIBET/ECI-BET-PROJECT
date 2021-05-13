@@ -28,6 +28,10 @@
     <!-- Main css -->
     <link href="assets/css/main.css" rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -56,37 +60,10 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav m-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="inplay.html">Inplay</a></li>
-                        <li class="nav-item"><a class="nav-link" href="winlist.html">Winlist</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="upcomming.html">Upcomming Match</a></li>
-                                <li><a class="dropdown-item" href="winlist.html">Winlist</a></li>
-                                <li><a class="dropdown-item" href="promotion.html">Promotion</a></li>
-                                <li><a class="dropdown-item" href="login.html">Login</a></li>
-                                <li><a class="dropdown-item" href="register.html">Registration</a></li>
-                                <li><a class="dropdown-item" href="faq.html">Faq</a></li>
-                                <li><a class="dropdown-item" href="404.html">Error</a></li>
-                                <li><a class="dropdown-item" href="privacy.html">Privacy</a></li>
-                                <li><a class="dropdown-item" href="tos.html">Terms and Condition</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="blog.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="blog.html">News</a></li>
-                                <li><a class="dropdown-item" href="blog-details.html">News Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
+                    <ul class="navbar-nav m-auto"></ul>
                     <div class="header-btn justify-content-end">
-                        <a href="register.html" class="bttn-small btn-fill"><i class="fa fa-key"></i>Signup</a>
-                        <a href="login.html" class="bttn-small btn-fill ml-2"><i class="fa fa-lock"></i>Login</a>
+                        <a href="register.html" class="bttn-small btn-fill"><i class="fa fa-key"></i>Inscribirse</a>
+                        <a href="login.html" class="bttn-small btn-fill ml-2"><i class="fa fa-key"></i>Acceso</a>
                     </div>
                 </div>
             </div>
@@ -97,33 +74,6 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6">
-                    <aside class="content-sidebar">
-                        <h3>Leagues</h3>
-                        <ul>
-                            <li><a href="#"><img src="assets/images/icons/leagues/1.png" alt=""> Premier League</a></li>
-                            <li><a href="#"><img src="assets/images/icons/leagues/2.png" alt=""> LaLiga</a></li>
-                            <li><a href="#"><img src="assets/images/icons/leagues/3.png" alt=""> UEFA Champions League</a></li>
-                            <li><a href="#"><img src="assets/images/icons/leagues/4.png" alt=""> Premier League</a></li>
-                            <li><a href="#"><img src="assets/images/icons/leagues/5.png" alt=""> LaLiga</a></li>
-                            <li><a href="#"><img src="assets/images/icons/leagues/1.png" alt=""> UEFA Champions League</a></li>
-                            <li><a href="#"><img src="assets/images/icons/leagues/1.png" alt=""> Premier League</a></li>
-                            <li><a href="#"><img src="assets/images/icons/leagues/2.png" alt=""> LaLiga</a></li>
-                            <li><a href="#"><img src="assets/images/icons/leagues/3.png" alt=""> UEFA Champions League</a></li>
-                            <li><a href="#"><img src="assets/images/icons/leagues/4.png" alt=""> Premier League</a></li>
-                            <li><a href="#"><img src="assets/images/icons/leagues/5.png" alt=""> LaLiga</a></li>
-                            <li><a href="#"><img src="assets/images/icons/leagues/1.png" alt=""> UEFA Champions League</a></li>
-                        </ul>
-                    </aside>
-                    <aside class="content-sidebar">
-                        <h3>Countries</h3>
-                        <ul>
-                            <li><a href="#"><img src="assets/images/icons/country/1.png" alt=""> England</a></li>
-                            <li><a href="#"><img src="assets/images/icons/country/2.png" alt=""> Spain</a></li>
-                            <li><a href="#"><img src="assets/images/icons/country/3.png" alt=""> Germany</a></li>
-                            <li><a href="#"><img src="assets/images/icons/country/4.png" alt=""> Italy</a></li>
-                            <li><a href="#"><img src="assets/images/icons/country/5.png" alt=""> France</a></li>
-                        </ul>
-                    </aside>
                 </div>
                 <div class="col-xl-8 col-lg-8 col-md-6 col-sm-6 mt-40">
                     <div class="content-center cl-white">
@@ -131,7 +81,7 @@
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="account-form">
                                     <div class="title">
-                                        <h3>Crear Cuenta</h3>
+                                        <h3>Crear una cuenta</h3>
                                     </div>
                                     <!--
                                     <div class="via-login">
@@ -142,6 +92,9 @@
                                     <form action="#">
                                         <div class="row">
                                             <div class="col-xl-12">
+                                                <p>Escribe tus datos para registrarse</p>
+                                            </div>
+                                            <div class="col-xl-12">
                                                 <input id="name" type="text" placeholder="Nombre Completo">
                                             </div>
                                             <div class="col-xl-12">
@@ -151,10 +104,20 @@
                                                 <input id="username" type="text" placeholder="Nombre de usuario">
                                             </div>
                                             <div class="col-xl-12">
-                                                <input id="email" type="email" placeholder="Email">
+                                                <input id="email" type="email" placeholder="Correo">
                                             </div>
                                             <div class="col-xl-12">
-                                                <input id="password" type="password" placeholder="Contraseña">
+                                                <input id="password" name="password" class="password" type="password" placeholder="Contraseña" required>
+                                            </div>
+                                            <div class="col-xl-1">
+                                                <input type="checkbox" onclick="show()" style="block-size: auto;" id="a" name="a">
+                                            </div>
+                                            <div class="col-xl-2\3">
+                                                <label for="a" id="labelPass" style="display: block !important;
+                                                    text-align: center !important;
+                                                    line-height: 150% !important;
+                                                    ">Ver Contraseña
+                                                </label>
                                             </div>
                                             <div class="col-xl-12">
                                                 <p>Creando una cuenta usted confirma que esta de acuerdo con los <a href="#">terminos y condiciones de miembro</a></p>
@@ -165,6 +128,17 @@
                                             <div class="col-xl-12">
                                                 <p><a href="login.html">Ya tiene una cuenta registrada?</a></p>
                                             </div>
+                                            <script>
+                                                function show(){
+                                                    var x = document.getElementById("password");
+                                                    if (x.type === "password"){
+                                                        x.type = "text";
+                                                    } else {
+                                                        x.type = "password"
+                                                    }
+                                                }
+
+                                            </script>
 
                                         </div>
                                     </form>
@@ -173,27 +147,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6">
-                    <div class="web-sidebar-widget">
-                        <div class="widget-head">
-                            <h3>Betsb info</h3>
-                        </div>
-                        <div class="widget-body">
-                            <p><strong>Register:</strong> SMS 'JOIN' to 26587</p>
-                            <p><strong>Customer care:</strong> 987654123</p>
-                            <p><strong>Customer care 2:</strong> 987654123</p>
-                            <p><strong>Email:</strong> info@betsb.com</p>
-                        </div>
-                    </div>
-                    <div class="web-sidebar-widget">
-                        <div class="widget-head">
-                            <h3>Betsb ads</h3>
-                        </div>
-                        <div class="widget-body p-0">
-                            <a href="#"><img class="w-100" src="assets/images/ads.jpg" alt=""></a>
-                        </div>
-                    </div>                 
-                </div>
+
             </div>
         </div>
     </section>

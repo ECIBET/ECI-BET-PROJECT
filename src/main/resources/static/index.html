@@ -61,34 +61,14 @@
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="inplay.html">Inplay</a></li>
                     <li class="nav-item"><a class="nav-link" href="winlist.html">Winlist</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="upcomming.html">Upcomming Match</a></li>
-                            <li><a class="dropdown-item" href="winlist.html">Winlist</a></li>
-                            <li><a class="dropdown-item" href="promotion.html">Promotion</a></li>
-                            <li><a class="dropdown-item" href="login.html">Login</a></li>
-                            <li><a class="dropdown-item" href="register.html">Registration</a></li>
-                            <li><a class="dropdown-item" href="faq.html">Faq</a></li>
-                            <li><a class="dropdown-item" href="404.html">Error</a></li>
-                            <li><a class="dropdown-item" href="privacy.html">Privacy</a></li>
-                            <li><a class="dropdown-item" href="tos.html">Terms and Condition</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="blog.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="blog.html">News</a></li>
-                            <li><a class="dropdown-item" href="blog-details.html">News Details</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="404.html">Error</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog-details.html">News Details</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
                 <div class="header-btn justify-content-end">
-                    <a href="register.html" class="bttn-small btn-fill"><i class="fa fa-key"></i>Signup</a>
-                    <a href="login.html" class="bttn-small btn-fill ml-2"><i class="fa fa-lock"></i>Login</a>
+                    <a href="register.html" class="bttn-small btn-fill"><i class="fa fa-key"></i>Inscribirse</a>
+                    <a href="login.html" class="bttn-small btn-fill ml-2"><i class="fa fa-lock"></i>Acceso</a>
                 </div>
             </div>
         </div>
@@ -143,42 +123,44 @@
                     </ul>
                 </aside>
             </div>
+            <script>
+                $('.carousel').carousel({
+                    interval: 2000
+                })
+            </script>
             <div class="col-xl-8 col-lg-8 col-md-6 col-sm-6">
                 <div class="main-content-slider owl-carousel">
-                    <div class="single-slider" style="background: url('assets/images/banner/hero-2.jpg') no-repeat center / cover;">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <h3>Lever of Soccer</h3>
-                                <p>Amet consectetur adipisicing elit. Debitis, et totam nisi est praesentium maxime mollitia earum aut temporibus aliquid esse eveniet impedit? Doloribus</p>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src='assets/images/banner/hero-2.jpg' alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src='assets/images/banner/hero-3.jpg' alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src='assets/images/banner/hero-4.jpg' alt="Third  slide">
+                            </div>
 
-                                <div class="hero-score">Venture <span>2.5</span></div>
-                                <div class="hero-score">Lebor <span>8.3</span></div>
-                                <div class="hero-score">122+ Bets</div>
-                            </div>
                         </div>
-                    </div>
-                    <div class="single-slider" style="background: url('assets/images/banner/hero-1.jpg') no-repeat center / cover;">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <h3>Lever of Games</h3>
-                                <p>Amet consectetur adipisicing elit. Debitis, et totam nisi est praesentium maxime mollitia earum aut temporibus aliquid esse eveniet impedit? Doloribus</p>
-                                <div class="hero-score">Venture <span>2.5</span></div>
-                                <div class="hero-score">Lebor <span>8.3</span></div>
-                                <div class="hero-score">122+ Bets</div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
                 <div class="game-box" >
                     <div class="card">
                         <div class="card-header">
-                            <h3>Football Games</h3>
-                            <span>Dark Mode</span><input type="checkbox" data-toggle="modal" data-target="#myModal2" id="switch"/><label for="switch">Toggle</label>
+                            <h3 style="color: #292929">Juegos de futbol</h3>
+                            <span style="color: #292929">Dark Mode</span><input type="checkbox" data-toggle="modal" data-target="#myModal2" id="switch"/><label for="switch">Toggle</label>
                         </div>
                         <div class="card-body">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link" id="contact-tab" data-toggle="tab" onclick="bets.askBet()" href="tables/apuestas/" role="tab" aria-controls="contact" aria-selected="false" >All Matches</a>
+                                    <a style="color: #292929" class="nav-link" id="contact-tab" data-toggle="tab" onclick="bets.askBet()" href="tables/apuestas/" role="tab" aria-controls="contact" aria-selected="false" >All Matches</a>
                                 </li>
                                 <li class="search-game">
                                     <input type="text" placeholder="Search">
@@ -213,12 +195,38 @@
             <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6">
                 <div class="web-sidebar-widget">
                     <div class="widget-head">
-                        <h3>Betsb ads</h3>
+                        <h3>Jugador del Mes</h3>
                     </div>
                     <div class="widget-body p-0">
-                        <a href="#" ><img class="w-100" src="assets/images/ads.jpg" alt=""></a>
+                        <a href="https://www.premierleague.com/" ><img class="w-100" src="assets/images/playermonth.png" alt=""></a>
                     </div>
                 </div>
+
+                <div class="web-sidebar-widget">
+                    <div class="widget-head">
+                        <h3>Anuncios de ECIBET</h3>
+                    </div>
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="assets/images/matchday.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="assets/images/sterling.jpg" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="assets/images/debruyne.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--
                 <div class="web-sidebar-widget">
                     <div class="widget-head">
                         <h3>Betsb info</h3>
@@ -230,58 +238,7 @@
                         <p><strong>Email:</strong> info@betsb.com</p>
                     </div>
                 </div>
-                <div class="web-sidebar-widget">
-                    <div class="widget-head">
-                        <h3>Betsb Chat</h3>
-                    </div>
-                    <div class="widget-body">
-                        <div class="chat-boxed">
-                            <div class="single-chat">
-                                <div class="img"><img src="assets/images/icons/chat/1.jpg" alt=""></div>
-                                <div class="chat-text">
-                                    <h4>Wakiritho <span>01.25</span></h4>
-                                    <p>Nani ako na program ya men's conference anidungie whatsapp?</p>
-                                </div>
-                            </div>
-                            <div class="single-chat">
-                                <div class="img"><img src="assets/images/icons/chat/2.jpg" alt=""></div>
-                                <div class="chat-text">
-                                    <h4>Wakiritho <span>01.25</span></h4>
-                                    <p>Nani ako na program ya men's conference anidungie whatsapp?</p>
-                                </div>
-                            </div>
-                            <div class="single-chat">
-                                <div class="img"><img src="assets/images/icons/chat/3.jpg" alt=""></div>
-                                <div class="chat-text">
-                                    <h4>Wakiritho <span>01.25</span></h4>
-                                    <p>Nani ako na program ya men's conference anidungie whatsapp?</p>
-                                </div>
-                            </div>
-                            <div class="single-chat">
-                                <div class="img"><img src="assets/images/icons/chat/4.jpg" alt=""></div>
-                                <div class="chat-text">
-                                    <h4>Wakiritho <span>01.25</span></h4>
-                                    <p>Nani ako na program ya men's conference anidungie whatsapp?</p>
-                                </div>
-                            </div>
-                            <div class="single-chat">
-                                <div class="img"><img src="assets/images/icons/chat/2.jpg" alt=""></div>
-                                <div class="chat-text">
-                                    <h4>Wakiritho <span>01.25</span></h4>
-                                    <p>Nani ako na program ya men's conference anidungie whatsapp?</p>
-                                </div>
-                            </div>
-                            <div class="single-chat">
-                                <div class="img"><img src="assets/images/icons/chat/2.jpg" alt=""></div>
-                                <div class="chat-text">
-                                    <h4>Wakiritho <span>01.25</span></h4>
-                                    <p>Nani ako na program ya men's conference anidungie whatsapp?</p>
-                                </div>
-                            </div>
-                            <a href="#" class="bttn-small btn-fill w-100 centered">Login to chat</a>
-                        </div>
-                    </div>
-                </div>
+
                 <aside class="content-sidebar pt-0">
                     <h3>Sports</h3>
                     <ul>
@@ -293,6 +250,7 @@
                         <li><a href="#"><img src="assets/images/icons/leagues/1.png" alt=""> UEFA Champions League</a></li>
                     </ul>
                 </aside>
+                -->
             </div>
         </div>
     </div>
@@ -303,14 +261,12 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Funcion en Proceso</h4>
+                    <h4 class="modal-title" style="color: #292929">Funcion en Proceso</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div class="modal-body">
-                    <h5>Funcion en proceso</h5>
-                </div>
+
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success"  data-dismiss="modal">Aceptar</button>
+                    <button type="button" class="btn btn-danger"  data-dismiss="modal">Aceptar</button>
                 </div>
             </div>
         </div>

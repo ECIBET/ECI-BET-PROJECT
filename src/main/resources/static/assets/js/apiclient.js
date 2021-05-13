@@ -8,12 +8,7 @@ var apiclient = (function () {
                 data: JSON.stringify([nombre, cedula, usuario, email, password]),
                 contentType: "application/json"
             });
-            promise.then(function () {
-                console.info("OK");
-                //callback();
-            }, function () {
-                console.info("ERROR");
-            });
+            return promise
         },
 
         obtenerTocken(correo,password,callback){
