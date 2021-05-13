@@ -69,9 +69,9 @@ var idPartido;
                                                       `</td><td><img src="assets/images/icons/teams/${info.logo1}"><br>` +
                                                       `<img src="assets/images/icons/teams/${info.logo2}">`+
                                                       "</td><td>" + info.equipo1 +"<br>"+ info.equipo2 +
-                                                      `</td><td><a id="${info.equipo1}" name ="${info.idApuesta}" type="button" class="btnn" data-toggle="modal" onclick="bets.updateCuota(${info.cuota1},this.id, this.name)" data-target="#myModal">${info.cuota1}</a>` +
-                                                      `</td><td><a id="${info.equipo1}&${info.equipo2}" name ="${info.idApuesta}" type="button" class="btnn" data-toggle="modal" onclick="bets.updateCuota(${info.cuotaEmpate},this.id, this.name)" data-target="#myModal">${info.cuotaEmpate}</a>` +
-                                                      `</td><td><a id="${info.equipo2}" name ="${info.idApuesta}" type="button" class="btnn" data-toggle="modal" onclick="bets.updateCuota(${info.cuota2},this.id, this.name)" data-target="#myModal">${info.cuota2}</a>`+
+                                                      `</td><td><a style="color: #292929" id="${info.equipo1}" name ="${info.idApuesta}" type="button" class="btnn" data-toggle="modal" onclick="bets.updateCuota(${info.cuota1},this.id, this.name)" data-target="#myModal">${info.cuota1}</a>` +
+                                                      `</td><td><a style="color: #292929" id="${info.equipo1}&${info.equipo2}" name ="${info.idApuesta}" type="button" class="btnn" data-toggle="modal" onclick="bets.updateCuota(${info.cuotaEmpate},this.id, this.name)" data-target="#myModal">${info.cuotaEmpate}</a>` +
+                                                      `</td><td><a style="color: #292929" id="${info.equipo2}" name ="${info.idApuesta}" type="button" class="btnn" data-toggle="modal" onclick="bets.updateCuota(${info.cuota2},this.id, this.name)" data-target="#myModal">${info.cuota2}</a>`+
                                                       `</td><td><a href="/Tables.html"><img src="assets/images/icons/stat.png" alt=""></a>` +
                                                       "</td></tr>"))
             })
