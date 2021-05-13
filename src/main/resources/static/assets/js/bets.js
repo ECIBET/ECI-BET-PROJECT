@@ -1,4 +1,5 @@
 bets = (function () {
+    var stompClient = null;
 var equipoCuota;
 var idPartido;
 
@@ -47,7 +48,7 @@ var idPartido;
 
     drawBet = function(resp){
         $("#betsTable tbody").empty();
-        //console.log(typeof(resp));
+        console.log(resp);
         if(resp !== undefined){
             var data = resp.map((info) => {
                 return {
@@ -79,6 +80,13 @@ var idPartido;
         }
     }
 
+    updateCuot = function(JsonUpdat){
+        //var json=JSON.parse(JsonUpdat)
+        console.log(JsonUpdat)
+        console.log("llega enviando y enviando")
+        stompClient.send("/app/newpoint",{},JsonUpdat);
+
+    }
     updateCuota = function(cuota,equipoC,id){
         var integer = parseFloat(cuota)
         equipoCuota = equipoC;
@@ -86,11 +94,23 @@ var idPartido;
         document.getElementById("cuotaApuesta").value = integer;
         localStorage.setItem("cuota",cuota);
     }
+    var subscribeToPoint = function(){
+
+            var socket = new SockJS('/stompendpoint');
+            stompClient = Stomp.over(socket);
+            stompClient.connect({}, function (frame) {
+                console.log('Connected: ' + frame);
+                stompClient.subscribe('/topic/newpoint', function (message) {
+                    console.log(message)
+                    var messagePoint=JSON.parse(message.body);
+                    drawBet(messagePoint)
+                });
+            });
+
+    }
 
     saveBet = function(pago,plata){
-        //console.log(localStorage.getItem("cuota"))
-        //console.log(equipoCuota)
-        //console.log(plata)
+
         var jsonApuesta = `{
             "idUser": ${localStorage.getItem("id")},
             "idPartido": ${idPartido},
@@ -98,12 +118,23 @@ var idPartido;
             "cuota": ${localStorage.getItem("cuota")},
             "valorApostado": ${plata}
         }`;
-       // console.log(jsonApuesta)
+        var jsonUpdate = `{
+            "idPartido": ${idPartido},
+            "equipoApuesta": ${equipoCuota},
+        }`;
+        //console.log(idPartido)
+        //console.log(jsonApuesta)
+        updateCuot(jsonUpdate)
+
         apiclient.guardarApuestas(localStorage.getItem("Authorization"),localStorage.getItem("id"),jsonApuesta);
     }
 
 
+
     return{
+        init: function () {
+            subscribeToPoint()
+        },
        bet:bet,
        updateCuota : updateCuota,
        saveBet : saveBet,

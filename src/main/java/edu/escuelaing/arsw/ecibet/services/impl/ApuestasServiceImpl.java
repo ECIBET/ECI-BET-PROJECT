@@ -5,6 +5,7 @@ import edu.escuelaing.arsw.ecibet.model.Apuesta;
 import edu.escuelaing.arsw.ecibet.model.ApuestaApi;
 import edu.escuelaing.arsw.ecibet.persistence.ApuestaRepository;
 import edu.escuelaing.arsw.ecibet.persistence.apis.ApiConnections;
+import edu.escuelaing.arsw.ecibet.persistence.impl.ApiConnectionsImpl;
 import edu.escuelaing.arsw.ecibet.services.ApuestasService;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -74,6 +75,11 @@ public class ApuestasServiceImpl implements ApuestasService {
                                             (String)stringJson.get("equipoApuesta"),1,(int)stringJson.get("idPartido"),(int)stringJson.get("idUser"));
 
         apuestaRepository.save(apuestaGuardar);
+    }
+
+    @Override
+    public ApiConnections getobjeto() {
+        return apiConne;
     }
 
 
