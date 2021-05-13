@@ -13,4 +13,5 @@ public interface ApiConnections {
     Set<ApuestaApi> getBets();
     Hashtable<Integer, ArrayList> getTableApuestas();
     ArrayList getTableApuestasUsuario(int id);
+    void setApuestas(JSONObject info);
 }

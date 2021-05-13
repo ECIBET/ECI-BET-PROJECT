@@ -2,6 +2,7 @@ package edu.escuelaing.arsw.ecibet.persistence.impl;
 
 import edu.escuelaing.arsw.ecibet.model.ApuestaApi;
 import edu.escuelaing.arsw.ecibet.persistence.apis.ApiConnections;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.stereotype.Component;
 
@@ -14,6 +15,158 @@ public class ApiConnectionsImpl implements ApiConnections {
     //[{"author":"author2","points":[{"x":0,"y":1},{"x":1,"y":0}],"name":"Blueprint_b"}}]
     private Hashtable<Integer, ArrayList> apuestasU=new Hashtable<Integer, ArrayList>();
     private ArrayList<String> bets;
+    public JSONObject apuestas=new JSONObject("{ \"10010\":[{\n" +
+            "  \"hora\": \"14:00\",\n" +
+            "  \"fecha\": \"9th Apr\",\n" +
+            "  \"logo1\": \"1.png\",\n" +
+            "  \"logo2\": \"20.png\",\n" +
+            "  \"equipo1\": \"Fulham\",\n" +
+            "  \"equipo2\": \"Wolverhampton\",\n" +
+            "  \"cuota1\": \"2.4\",\n" +
+            "  \"cuotaEmpate\": \"3.2\",\n" +
+            "  \"cuota2\": \"3.0\"\n" +
+            "}]," +
+            "\"10011\":[{\n" +
+            "  \"hora\": \"06:30\",\n" +
+            "  \"fecha\": \"10th Apr\",\n" +
+            "  \"logo1\": \"8.png\",\n" +
+            "  \"logo2\": \"18.png\",\n" +
+            "  \"equipo1\": \"MANCHESTER CITY\",\n" +
+            "  \"equipo2\": \"LEEDS\",\n" +
+            "  \"cuota1\": \"1.22\",\n" +
+            "  \"cuotaEmpate\": \"6.5\",\n" +
+            "  \"cuota2\": \"11.0\"\n" +
+            "}]," +
+            "\"10012\":[{\n" +
+            "  \"hora\": \"09:00\",\n" +
+            "  \"fecha\": \"10th Apr\",\n" +
+            "  \"logo1\": \"7.png\",\n" +
+            "  \"logo2\": \"6.png\",\n" +
+            "  \"equipo1\": \"LIVERPOOL\",\n" +
+            "  \"equipo2\": \"ASTON VILLA\",\n" +
+            "  \"cuota1\": \"1.40\",\n" +
+            "  \"cuotaEmpate\": \"4.75\",\n" +
+            "  \"cuota2\": \"7.50\"\n" +
+            "}]," +
+            "\"10013\":[{\n" +
+            "  \"hora\": \"11:30\",\n" +
+            "  \"fecha\": \"10th Apr\",\n" +
+            "  \"logo1\": \"4.png\",\n" +
+            "  \"logo2\": \"3.png\",\n" +
+            "  \"equipo1\": \"CRYSTAL PALACE\",\n" +
+            "  \"equipo2\": \"CHELSEA\",\n" +
+            "  \"cuota1\": \"9.50\",\n" +
+            "  \"cuotaEmpate\": \"4.00\",\n" +
+            "  \"cuota2\": \"1.40\"\n" +
+            "}]," +
+            "\"10014\":[{\n" +
+            "  \"hora\": \"06:00\",\n" +
+            "  \"fecha\": \"10th Apr\",\n" +
+            "  \"logo1\": \"17.png\",\n" +
+            "  \"logo2\": \"12.png\",\n" +
+            "  \"equipo1\": \"BURNLEY\",\n" +
+            "  \"equipo2\": \"NEWCASTLE\",\n" +
+            "  \"cuota1\": \"2.15\",\n" +
+            "  \"cuotaEmpate\": \"3.10\",\n" +
+            "  \"cuota2\": \"3.60\"\n" +
+            "}]," +
+            "\"10015\":[{\n" +
+            "  \"hora\": \"08:00\",\n" +
+            "  \"fecha\": \"11TH APR\",\n" +
+            "  \"logo1\": \"14.png\",\n" +
+            "  \"logo2\": \"10.png\",\n" +
+            "  \"equipo1\": \"WEST HAM\",\n" +
+            "  \"equipo2\": \"LEICESTER\",\n" +
+            "  \"cuota1\": \"2.90\",\n" +
+            "  \"cuotaEmpate\": \"3.40\",\n" +
+            "  \"cuota2\": \"2.37\"\n" +
+            "}]," +
+            "\"10016\":[{\n" +
+            "  \"hora\": \"10:30\",\n" +
+            "  \"fecha\": \"11TH APR\",\n" +
+            "  \"logo1\": \"13.png\",\n" +
+            "  \"logo2\": \"9.png\",\n" +
+            "  \"equipo1\": \"TOTTENHAM\",\n" +
+            "  \"equipo2\": \"MANCHESTER UNITED\",\n" +
+            "  \"cuota1\": \"2.80\",\n" +
+            "  \"cuotaEmpate\": \"3.40\",\n" +
+            "  \"cuota2\": \"2.40\"\n" +
+            "}]," +
+            "\"10017\":[{\n" +
+            "  \"hora\": \"13:00\",\n" +
+            "  \"fecha\": \"11TH APR\",\n" +
+            "  \"logo1\": \"19.png\",\n" +
+            "  \"logo2\": \"2.png\",\n" +
+            "  \"equipo1\": \"SHEFFIELD UNITED\",\n" +
+            "  \"equipo2\": \"ARSENAL\",\n" +
+            "  \"cuota1\": \"6.50\",\n" +
+            "  \"cuotaEmpate\": \"3.75\",\n" +
+            "  \"cuota2\": \"1.55\"\n" +
+            "}]," +
+            "\"10018\":[{\n" +
+            "  \"hora\": \"12:00\",\n" +
+            "  \"fecha\": \"12TH APR\",\n" +
+            "  \"logo1\": \"15.png\",\n" +
+            "  \"logo2\": \"11.png\",\n" +
+            "  \"equipo1\": \"WEST BROM\",\n" +
+            "  \"equipo2\": \"SOUTHAMPTON\",\n" +
+            "  \"cuota1\": \"4.00\",\n" +
+            "  \"cuotaEmpate\": \"3.20\",\n" +
+            "  \"cuota2\": \"2.05\"\n" +
+            "}]," +
+            "\"10019\":[{\n" +
+            "  \"hora\": \"14:15\",\n" +
+            "  \"fecha\": \"12TH APR\",\n" +
+            "  \"logo1\": \"16.png\",\n" +
+            "  \"logo2\": \"5.png\",\n" +
+            "  \"equipo1\": \"BRIGHTON\",\n" +
+            "  \"equipo2\": \"EVERTON\",\n" +
+            "  \"cuota1\": \"2.25\",\n" +
+            "  \"cuotaEmpate\": \"3.30\",\n" +
+            "  \"cuota2\": \"3.10\"\n" +
+            "}]" +
+            "}");
+
+    public void setApuestas(JSONObject info) {
+        String idPartido=info.get("idPartido").toString();
+        String equipo= info.get("equipoApuesta").toString();
+        JSONObject update=new JSONObject(apuestas.get(idPartido).toString().substring(1, apuestas.get(idPartido).toString().length() - 1));
+//        System.out.println("----------------------------------");
+//        System.out.println(equipo.toString());
+//        System.out.println(update.get("equipo1").toString());
+//        System.out.println("----------------------------------");
+        String equipouno=update.get("equipo1").toString();
+        String equipodos=update.get("equipo2").toString();
+        if(equipo.toString().equals(equipouno)){
+            String cuo=update.get("cuota1").toString();
+            double num=Double.parseDouble(cuo)-0.3;
+            String cuot=String.valueOf(num);
+            update.put("cuota1",cuot);
+        }
+        else if(equipo.equals(equipodos)){
+            String cuo=update.get("cuota2").toString();
+            double num=Double.parseDouble(cuo)-0.3;
+            String cuot=String.valueOf(num);
+            update.put("cuota2",cuot);
+
+        }
+        else{
+            String cuo=update.get("cuotaEmpate").toString();
+            double num=Double.parseDouble(cuo)-0.3;
+            String cuot=String.valueOf(num);
+            update.put("cuotaEmpate",cuot);
+
+        }
+
+
+        JSONArray as=new JSONArray();
+        as.put(update);
+
+        apuestas.put(idPartido,as);
+//        System.out.println("------------------------");
+//        System.out.println(apuestas.get(idPartido).toString());
+
+    }
 
     @Override
     public JSONObject getTablePremiereLeague() {
@@ -24,117 +177,8 @@ public class ApiConnectionsImpl implements ApiConnections {
     }
     @Override
     public Set<ApuestaApi> getBets() {
-        JSONObject tableJson = new JSONObject("{ \"10010\":[{\n" +
-                "  \"hora\": \"14:00\",\n" +
-                "  \"fecha\": \"9th Apr\",\n" +
-                "  \"logo1\": \"1.png\",\n" +
-                "  \"logo2\": \"20.png\",\n" +
-                "  \"equipo1\": \"Fulham\",\n" +
-                "  \"equipo2\": \"Wolverhampton\",\n" +
-                "  \"cuota1\": \"2.4\",\n" +
-                "  \"cuotaEmpate\": \"3.2\",\n" +
-                "  \"cuota2\": \"3.0\"\n" +
-                "}]," +
-                "\"10011\":[{\n" +
-                "  \"hora\": \"06:30\",\n" +
-                "  \"fecha\": \"10th Apr\",\n" +
-                "  \"logo1\": \"8.png\",\n" +
-                "  \"logo2\": \"18.png\",\n" +
-                "  \"equipo1\": \"MANCHESTER CITY\",\n" +
-                "  \"equipo2\": \"LEEDS\",\n" +
-                "  \"cuota1\": \"1.22\",\n" +
-                "  \"cuotaEmpate\": \"6.5\",\n" +
-                "  \"cuota2\": \"11.0\"\n" +
-                "}]," +
-                "\"10012\":[{\n" +
-                "  \"hora\": \"09:00\",\n" +
-                "  \"fecha\": \"10th Apr\",\n" +
-                "  \"logo1\": \"7.png\",\n" +
-                "  \"logo2\": \"6.png\",\n" +
-                "  \"equipo1\": \"LIVERPOOL\",\n" +
-                "  \"equipo2\": \"ASTON VILLA\",\n" +
-                "  \"cuota1\": \"1.40\",\n" +
-                "  \"cuotaEmpate\": \"4.75\",\n" +
-                "  \"cuota2\": \"7.50\"\n" +
-                "}]," +
-                "\"10013\":[{\n" +
-                "  \"hora\": \"11:30\",\n" +
-                "  \"fecha\": \"10th Apr\",\n" +
-                "  \"logo1\": \"4.png\",\n" +
-                "  \"logo2\": \"3.png\",\n" +
-                "  \"equipo1\": \"CRYSTAL PALACE\",\n" +
-                "  \"equipo2\": \"CHELSEA\",\n" +
-                "  \"cuota1\": \"9.50\",\n" +
-                "  \"cuotaEmpate\": \"4.00\",\n" +
-                "  \"cuota2\": \"1.40\"\n" +
-                "}]," +
-                "\"10014\":[{\n" +
-                "  \"hora\": \"06:00\",\n" +
-                "  \"fecha\": \"10th Apr\",\n" +
-                "  \"logo1\": \"17.png\",\n" +
-                "  \"logo2\": \"12.png\",\n" +
-                "  \"equipo1\": \"BURNLEY\",\n" +
-                "  \"equipo2\": \"NEWCASTLE\",\n" +
-                "  \"cuota1\": \"2.15\",\n" +
-                "  \"cuotaEmpate\": \"3.10\",\n" +
-                "  \"cuota2\": \"3.60\"\n" +
-                "}]," +
-                "\"10015\":[{\n" +
-                "  \"hora\": \"08:00\",\n" +
-                "  \"fecha\": \"11TH APR\",\n" +
-                "  \"logo1\": \"14.png\",\n" +
-                "  \"logo2\": \"10.png\",\n" +
-                "  \"equipo1\": \"WEST HAM\",\n" +
-                "  \"equipo2\": \"LEICESTER\",\n" +
-                "  \"cuota1\": \"2.90\",\n" +
-                "  \"cuotaEmpate\": \"3.40\",\n" +
-                "  \"cuota2\": \"2.37\"\n" +
-                "}]," +
-                "\"10016\":[{\n" +
-                "  \"hora\": \"10:30\",\n" +
-                "  \"fecha\": \"11TH APR\",\n" +
-                "  \"logo1\": \"13.png\",\n" +
-                "  \"logo2\": \"9.png\",\n" +
-                "  \"equipo1\": \"TOTTENHAM\",\n" +
-                "  \"equipo2\": \"MANCHESTER UNITED\",\n" +
-                "  \"cuota1\": \"2.80\",\n" +
-                "  \"cuotaEmpate\": \"3.40\",\n" +
-                "  \"cuota2\": \"2.40\"\n" +
-                "}]," +
-                "\"10017\":[{\n" +
-                "  \"hora\": \"13:00\",\n" +
-                "  \"fecha\": \"11TH APR\",\n" +
-                "  \"logo1\": \"19.png\",\n" +
-                "  \"logo2\": \"2.png\",\n" +
-                "  \"equipo1\": \"SHEFFIELD UNITED\",\n" +
-                "  \"equipo2\": \"ARSENAL\",\n" +
-                "  \"cuota1\": \"6.50\",\n" +
-                "  \"cuotaEmpate\": \"3.75\",\n" +
-                "  \"cuota2\": \"1.55\"\n" +
-                "}]," +
-                "\"10018\":[{\n" +
-                "  \"hora\": \"12:00\",\n" +
-                "  \"fecha\": \"12TH APR\",\n" +
-                "  \"logo1\": \"15.png\",\n" +
-                "  \"logo2\": \"11.png\",\n" +
-                "  \"equipo1\": \"WEST BROM\",\n" +
-                "  \"equipo2\": \"SOUTHAMPTON\",\n" +
-                "  \"cuota1\": \"4.00\",\n" +
-                "  \"cuotaEmpate\": \"3.20\",\n" +
-                "  \"cuota2\": \"2.05\"\n" +
-                "}]," +
-                "\"10019\":[{\n" +
-                "  \"hora\": \"14:15\",\n" +
-                "  \"fecha\": \"12TH APR\",\n" +
-                "  \"logo1\": \"16.png\",\n" +
-                "  \"logo2\": \"5.png\",\n" +
-                "  \"equipo1\": \"BRIGHTON\",\n" +
-                "  \"equipo2\": \"EVERTON\",\n" +
-                "  \"cuota1\": \"2.25\",\n" +
-                "  \"cuotaEmpate\": \"3.30\",\n" +
-                "  \"cuota2\": \"3.10\"\n" +
-                "}]" +
-                "}");
+        JSONObject tableJson = apuestas;
+
         Iterator<String> keys = tableJson.keys();
         Set<ApuestaApi> apuestasApi =new HashSet<>();
         ArrayList<String> idApuestas = new ArrayList<>();

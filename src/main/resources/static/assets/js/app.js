@@ -21,6 +21,7 @@ var app = (function () {
     }
     function onloadBets() {
         bets.bet()
+        bets.init()
         if (localStorage.getItem("Authorization") !== null) {
              onloadUsuario();
              return
