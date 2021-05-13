@@ -278,24 +278,27 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Apuesta Sencilla</h4>
+                    <h3 class="modal-title" style="color: #292929">Apuesta Sencilla</h3>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <form oninput="x.value=plata.value*cuotaApuesta.value">
-                        Cuota:
+                    <form oninput="x.value=plata.value*cuotaApuesta.value" style="color: #292929">
+                        <h4 style="color: #292929">Cuota:</h4>
                         <input type="number" id="cuotaApuesta" readonly>
                         <br>
-                        Valor Apostar:
+                        <h4 style="color: #292929">Valor Apostar:</h4>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">$</span>
                             </div>
                             <input type="number" class="form-control" id="plata" step="100" min="500"  placeholder="Apuesta Minima $500" >
-                         </div>
-                        Pago:
+                        </div>
+                        <h4 style="color: #292929">Pago:</h4>
                         <output id="pagoFinal" name="x" for="cuotaApuesta plata"></output>
                     </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-toggle="modal" data-target="#apuestaRealizada" class="btn btn-danger" id="botonapuesta" data-dismiss="modal" onclick="bets.saveBet(document.getElementById('pagoFinal').value, document.getElementById('plata').value)">Apostar</button>
                 </div>
             </div>
         </div>
@@ -364,6 +367,16 @@
 <script src="assets/js/app.js"></script>
 <script src="assets/js/apiclient.js"></script>
 <script src="assets/js/bets.js"></script>
+
+<script type="text/javascript">
+    window._mfq = window._mfq || [];
+    (function() {
+        var mf = document.createElement("script");
+        mf.type = "text/javascript"; mf.defer = true;
+        mf.src = "//cdn.mouseflow.com/projects/c52084c4-e73d-41d0-bb4b-712369b90bee.js";
+        document.getElementsByTagName("head")[0].appendChild(mf);
+    })();
+</script>
 </body>
 
 <!-- Mirrored from rexbd.net/html/betsb/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Mar 2021 05:50:50 GMT -->
