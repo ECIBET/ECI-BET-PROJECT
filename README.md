@@ -19,13 +19,13 @@ ECIBET es un aplicativo web para una empresa de apuestas enfocadas en el futbol 
 - Estado de cuenta (Usuario - Administrador)
 - Informacion total de las apuestas realizadas (Administrador)
 
-### Manual de Usuario :lock:
-[Manual](https://ecibets.gitbook.io/u/manual-de-usuario-ecibet)
+### Manual de Usuario `gitbook` :lock:
+[`Manual`](https://ecibets.gitbook.io/u/manual-de-usuario-ecibet)
 
 ## Comandos
 Para compilar y correr las pruebas: ```mvn package```
 
-Para ejecutar y utilizar el programa: ```mvn exec:java -Dexec.mainClass="Main```
+Para ejecutar y utilizar el programa: ```mvn exec:java -Dexec.mainClass="Main o java -jar target/java-getting-started-1.0.jar```
 
 Para ejecutar las pruebas: ```mvn test```
 
