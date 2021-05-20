@@ -6,8 +6,8 @@
 - Profesor: Sebastian Henao Pinzon
 
 ## Roles :bell:
-- Nikolai Bermudez Vega: Scrum Master
-- Verbo Camacho: Developer
+- Nikolai Bermudez Vega: Scrum Master - Full Stack Developer
+- Verbo Camacho: Full Stack Developer
 - Sebastian Henao Pinzon: Product Owner
 
 ## Descripción del proyecto :currency_exchange:
