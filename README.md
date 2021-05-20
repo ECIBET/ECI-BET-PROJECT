@@ -48,7 +48,7 @@ Para generar javadoc de las pruebas: ```mvn javadoc:test-javadoc```
 ## Descripcion de la Metodologia :unlock:
 - Planeacion (link en la imagen)
 
-[![Taiga](https://devel.nuclex.org/logos/taiga-logo.jpg)](https://tree.taiga.io/project/verbocamacho-ecibeteci-bet-project/backlog)
+[![Taiga](img/logo_horizontal.png)](https://tree.taiga.io/project/verbocamacho-ecibeteci-bet-project/backlog)
 
 ## Arquitectura de Diseño
 ## Casos de uso
