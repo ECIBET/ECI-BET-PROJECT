@@ -69,6 +69,46 @@ Para generar javadoc de las pruebas: ```mvn javadoc:test-javadoc```
 # MockUps
 [MockUps](https://github.com/ECIBET/ECI-BET-PROJECT/tree/master/img/mockups)
 
+# Requerimientos no Funcionales
+## 1.Usabilidad
+Se hicieron pruebas de usabilidad con un framework llamado MouseFlow el cual nos ayuda a monitorear el uso de la aplicacioncon metricas como los clicks, un mapa de calor del uso e interaccion de los usuarios en la pagina y un dashboard con estadisticas y demas informacion de la interaccion de la pagina. A continuacion podremos observar cada una de la metricas descritas
+
+### Clics
+![](img/clicks.jpg)
+
+### HeatMap
+![](img/heatmap.jpg)
+
+### Dashboard
+![](img/dashboard.jpg)
+
+## 2. Usabilidad
+Se realizaron pruebas responsive sobre toda la pagina, de tal modo de que pudieramos observar que sin importar el tamano se puede ver el mismo contenido de manera organizada. A continuacion podremos obsevar como se puede ver la pagina en un tamaño para celular
+
+![](img/responsive.jpg)
+
+![](img/responsive2.jpg)
+
+![](img/responsive3.jpg)
+
+## 3. Escalabilidad
+Se hicieron pruebas de carga una vez desplegada la aplicación en el servicio de despliegue de aplicaciones web de azure (Azure App Service). En primera instancia se realizaron las pruebas con las configuraciones que vienen por defecto en el App Service Plan esto quiere decir con una sola instancia del servidor y el monitor nos arrojó los siguientes resultados.
+
+![](img/unknown2.png)
+
+El uso de la CPU usando un nodo es de aproximadamente un 37% realizando dos mil peticiones como se muestra en la siguiente imagen.
+
+Finalmente se escaló el App service plan para que use 3 instancias de servidor, se hicieron las pruebas con las mismas dos mil peticiones y los resultados fueron los siguientes:
+
+![](img/unknown.png)
+
+Lo cual podríamos inferir que al usar prácticamente toda la capacidad de procesamiento de dos de los servidores realizó las dos mil peticiones mucho más rápido como se puede observar a continuación.
+
+![](img/pruebas.png)
+
+Esto con diferencia a los primeros datos obtenidos con ayuda de la herramienta JMeter
+
+![](img/unknown3.png)
 
 
 ## Construido
