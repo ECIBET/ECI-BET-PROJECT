@@ -68,9 +68,9 @@ Para generar javadoc de las pruebas: ```mvn javadoc:test-javadoc```
 
 # MockUps
 ## Log In
-![](img/Log.jpeg)
+![](img/mockups/Log.jpeg)
 ## Inicio
-![](img/Inicio.jpeg)
+![](img/mockups/Inicio.jpeg)
 
 
 
