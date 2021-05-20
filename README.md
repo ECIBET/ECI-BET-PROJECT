@@ -46,7 +46,6 @@ Para generar javadoc de las pruebas: ```mvn javadoc:test-javadoc```
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9c5a8e845ac94857ab11ec72cb0afd78)](https://www.codacy.com/gh/ECIBET/ECI-BET-PROJECT/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ECIBET/ECI-BET-PROJECT&amp;utm_campaign=Badge_Grade)
 
 ## Descripcion de la Metodologia :unlock:
-- Planeacion (link en la imagen)
 
 [![Taiga](img/logo_horizontal.png)](https://tree.taiga.io/project/verbocamacho-ecibeteci-bet-project/backlog)
 
