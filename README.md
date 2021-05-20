@@ -1,4 +1,4 @@
-# ECIBET :gem:
+![](src/main/resources/static/assets/images/logo.png) :gem:
 
 ## Informacion General
 - Curso: Arquitectura de Software: 2021 - 1
@@ -21,32 +21,6 @@ ECIBET es un aplicativo web para una empresa de apuestas enfocadas en el futbol 
 
 ### Manual de Usuario :lock:
 [Manual](https://ecibets.gitbook.io/u/manual-de-usuario-ecibet)
-
-
-## Arquitectura de Diseño
-## Casos de uso
-![](img/Casos_de_uso.jpg)
-
-## Modelo Entidad - Relacion
-![](img/image.png)
-
-## Modelo Componentes 
-![](img/component.png)
-
-## Diagrama de Clases
-![](img/DiagramadeClases.png)
-
-## Diagrama de BD
-![](img/DB.jpg)
-
-## Diagrama de Despliegue
-![](img/Diagramdespliegue.png)
-
-# MockUps
-## Log In
-![](img/Log.jpeg)
-## Inicio
-![](img/Inicio.jpeg)
 
 ## Comandos
 Para compilar y correr las pruebas: ```mvn package```
@@ -75,6 +49,30 @@ Para generar javadoc de las pruebas: ```mvn javadoc:test-javadoc```
 - Planeacion (link en la imagen)
 
 [![Taiga](https://devel.nuclex.org/logos/taiga-logo.jpg)](https://tree.taiga.io/project/verbocamacho-ecibeteci-bet-project/backlog)
+
+## Arquitectura de Diseño
+## Casos de uso
+![](img/Casos_de_uso.jpg)
+
+## Modelo Componentes 
+![](img/component.png)
+
+## Diagrama de Clases
+![](img/DiagramadeClases.png)
+
+## Diagrama de BD
+![](img/DB.jpg)
+
+## Diagrama de Despliegue
+![](img/Diagramdespliegue.png)
+
+# MockUps
+## Log In
+![](img/Log.jpeg)
+## Inicio
+![](img/Inicio.jpeg)
+
+
 
 ## Construido
 [IntelliJ IDEA](https://www.jetbrains.com/es-es/idea/) Editor de JAVA donde se puede compilar el proyecto.
