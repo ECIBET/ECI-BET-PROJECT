@@ -53,7 +53,7 @@ var app = (function () {
     }
     drawStat = function(resp){
         $("#statTable tbody").empty();
-        //console.log(typeof(resp));
+        //console.log(resp);
         var contact = JSON.parse(resp);
         if(contact !== undefined){
             var data = contact.map((info) => {
