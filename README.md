@@ -67,10 +67,7 @@ Para generar javadoc de las pruebas: ```mvn javadoc:test-javadoc```
 ![](img/Diagramdespliegue.png)
 
 # MockUps
-## Log In
-![](img/mockups/Log.jpeg)
-## Inicio
-![](img/mockups/Inicio.jpeg)
+[MockUps](https://github.com/ECIBET/ECI-BET-PROJECT/tree/master/img/mockups)
 
 
 
